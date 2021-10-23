@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Box Office Detail View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="BoxOfficeDetailViewController" id="Y6W-OH-hqX" customClass="BoxOfficeDetailViewController" customModule="SeSAC_MYlog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="문장 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MIv-m5-ueU">
+                                <rect key="frame" x="52" y="259.5" width="310.5" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="11p-50-GXe">
+                                <rect key="frame" x="52" y="313.5" width="310.5" height="269"/>
+                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="11p-50-GXe" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.3" id="EAP-LL-6Zo"/>
+                            <constraint firstItem="11p-50-GXe" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="EuN-kX-Fbm"/>
+                            <constraint firstItem="11p-50-GXe" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.75" id="Ksj-qC-oct"/>
+                            <constraint firstItem="11p-50-GXe" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="ZIv-Ap-ATf"/>
+                            <constraint firstItem="11p-50-GXe" firstAttribute="top" secondItem="MIv-m5-ueU" secondAttribute="bottom" constant="20" id="eBI-iG-A92"/>
+                            <constraint firstItem="MIv-m5-ueU" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="emr-mr-U2G"/>
+                            <constraint firstItem="MIv-m5-ueU" firstAttribute="width" secondItem="11p-50-GXe" secondAttribute="width" id="uHS-kR-Abo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="overViewTextView" destination="11p-50-GXe" id="siw-UA-IAp"/>
+                        <outlet property="titleTextField" destination="MIv-m5-ueU" id="Acw-Px-icr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="110"/>
+        </scene>
+        <!--Box Office Cast View Controller-->
+        <scene sceneID="lru-7H-20n">
+            <objects>
+                <viewController storyboardIdentifier="BoxOfficeCastViewController" id="ugT-GL-El3" customClass="BoxOfficeCastViewController" customModule="SeSAC_MYlog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="m5k-i0-S9g">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UG0-ll-IzS">
+                                <rect key="frame" x="30" y="94" width="354" height="718"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CastCell" id="aah-Oh-pdU">
+                                        <rect key="frame" x="0.0" y="44.5" width="354" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aah-Oh-pdU" id="ZNV-ov-mlw">
+                                            <rect key="frame" x="0.0" y="0.0" width="354" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ugT-GL-El3" id="PXz-I8-QLl"/>
+                                    <outlet property="delegate" destination="ugT-GL-El3" id="V5J-HO-38a"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wzB-EE-Iyj"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="UG0-ll-IzS" firstAttribute="leading" secondItem="wzB-EE-Iyj" secondAttribute="leading" constant="30" id="Ddw-y9-I9Q"/>
+                            <constraint firstItem="UG0-ll-IzS" firstAttribute="top" secondItem="wzB-EE-Iyj" secondAttribute="top" constant="50" id="RdA-fy-ZMw"/>
+                            <constraint firstItem="wzB-EE-Iyj" firstAttribute="bottom" secondItem="UG0-ll-IzS" secondAttribute="bottom" constant="50" id="hhD-5P-DBt"/>
+                            <constraint firstItem="wzB-EE-Iyj" firstAttribute="trailing" secondItem="UG0-ll-IzS" secondAttribute="trailing" constant="30" id="sfQ-Bi-rSX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="castTableView" destination="UG0-ll-IzS" id="7p2-hS-IEx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ot-ZJ-IpU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="883" y="110"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
