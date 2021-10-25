@@ -17,10 +17,7 @@ class ViewController: UIViewController {
     }
     
     func getCurrentWeather() {
-        // OpenWeatherLink
-        
-        AF.request(<#T##convertible: URLConvertible##URLConvertible#>, method: <#T##HTTPMethod#>, parameters: <#T##Encodable?#>, encoder: <#T##ParameterEncoder#>, headers: <#T##HTTPHeaders?#>, interceptor: <#T##RequestInterceptor?#>, requestModifier: <#T##Session.RequestModifier?##Session.RequestModifier?##(inout URLRequest) throws -> Void#>)
-        
+        // OpenWeatherLink       
         
         AF.request(url, method: .get).validate().responseJSON { response in
             switch response.result {
