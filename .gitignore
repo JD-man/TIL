@@ -133,6 +133,8 @@ iOSInjectionProject/
 ## Firebase
 **/**/GoogleService-Info.plist
 
+## APIKey
+**/**/APIKey 
 
 ## Gcc Patch
 /*.gcno
