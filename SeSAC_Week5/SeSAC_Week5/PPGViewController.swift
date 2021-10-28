@@ -14,7 +14,11 @@ class PPGViewController: UIViewController {
     @IBOutlet weak var sourceTextView: UITextView!
     @IBOutlet weak var targetTextView: UITextView!
     
-    
+    var translateText: String = "" {
+        didSet {
+            targetTextView.text = translateText
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,29 +27,16 @@ class PPGViewController: UIViewController {
     }
 
     @IBAction func translateButtonClicked(_ sender: UIButton) {
-        let url = "https://openapi.naver.com/v1/papago/n2mt"
-        
-        let headers: HTTPHeaders = [
-            "X-Naver-Client-Id" : naverClientID,
-            "X-Naver-Client-Secret" : naverClientSecret
-        ]
-        
-        let parameters = [
-            "source" : "ko",
-            "target" : "en",
-            "text" : sourceTextView.text!
-        ]
-        
-        AF.request(url, method: .post, parameters: parameters, headers: headers).validate().responseJSON { response in
-            switch response.result {
-            case .success(let data):
-                let json = JSON(data)
-                self.targetTextView.text = json["message"]["result"]["translatedText"].stringValue
-            case .failure(let error):
-                print(error)
+        guard let text = sourceTextView.text else { return }
+        TranslatedAPIManager.shared.fetchTranslateData(text: text) { statusCode, json in
+            switch statusCode {
+            case 200:
+                self.translateText = json["message"]["result"]["translatedText"].stringValue
+            case 400:
+                self.translateText = json["errorMessage"].stringValue
+            default:
+                print("오류")
             }
         }
-        
     }
-    
 }

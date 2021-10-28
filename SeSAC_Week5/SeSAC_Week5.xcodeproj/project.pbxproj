@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8903DBA8272A21FD0027ED2F /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 8903DBA7272A21FD0027ED2F /* JGProgressHUD */; };
 		8942750F2726C3AD00594AFE /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8942750E2726C3AD00594AFE /* APIKey.swift */; };
+		8942AD682728D35400F3F79E /* TranslatedAPIManager.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8942AD672728D35400F3F79E /* TranslatedAPIManager.swift.swift */; };
+		8942AD6A2728EA0B00F3F79E /* VisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8942AD692728EA0B00F3F79E /* VisionViewController.swift */; };
+		8942AD6C2728EC7800F3F79E /* VisionAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8942AD6B2728EC7800F3F79E /* VisionAPIManager.swift */; };
 		89D055342727929600417957 /* PPGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D055332727929600417957 /* PPGViewController.swift */; };
 		89EA9C1B27264458000A64C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EA9C1A27264458000A64C0 /* AppDelegate.swift */; };
 		89EA9C1D27264458000A64C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EA9C1C27264458000A64C0 /* SceneDelegate.swift */; };
@@ -21,6 +25,9 @@
 
 /* Begin PBXFileReference section */
 		8942750E2726C3AD00594AFE /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		8942AD672728D35400F3F79E /* TranslatedAPIManager.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatedAPIManager.swift.swift; sourceTree = "<group>"; };
+		8942AD692728EA0B00F3F79E /* VisionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionViewController.swift; sourceTree = "<group>"; };
+		8942AD6B2728EC7800F3F79E /* VisionAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionAPIManager.swift; sourceTree = "<group>"; };
 		89D055332727929600417957 /* PPGViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPGViewController.swift; sourceTree = "<group>"; };
 		89EA9C1727264458000A64C0 /* SeSAC_Week5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSAC_Week5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89EA9C1A27264458000A64C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +45,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89EA9C33272644FE000A64C0 /* SwiftyJSON in Frameworks */,
+				8903DBA8272A21FD0027ED2F /* JGProgressHUD in Frameworks */,
 				89EA9C3027264489000A64C0 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,6 +89,9 @@
 				89EA9C2527264459000A64C0 /* LaunchScreen.storyboard */,
 				89EA9C2827264459000A64C0 /* Info.plist */,
 				89D055332727929600417957 /* PPGViewController.swift */,
+				8942AD672728D35400F3F79E /* TranslatedAPIManager.swift.swift */,
+				8942AD692728EA0B00F3F79E /* VisionViewController.swift */,
+				8942AD6B2728EC7800F3F79E /* VisionAPIManager.swift */,
 			);
 			path = SeSAC_Week5;
 			sourceTree = "<group>";
@@ -104,6 +115,7 @@
 			packageProductDependencies = (
 				89EA9C2F27264489000A64C0 /* Alamofire */,
 				89EA9C32272644FE000A64C0 /* SwiftyJSON */,
+				8903DBA7272A21FD0027ED2F /* JGProgressHUD */,
 			);
 			productName = SeSAC_Week5;
 			productReference = 89EA9C1727264458000A64C0 /* SeSAC_Week5.app */;
@@ -136,6 +148,7 @@
 			packageReferences = (
 				89EA9C2E27264489000A64C0 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				89EA9C31272644FE000A64C0 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				8903DBA6272A21FD0027ED2F /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
 			);
 			productRefGroup = 89EA9C1827264458000A64C0 /* Products */;
 			projectDirPath = "";
@@ -164,10 +177,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8942AD682728D35400F3F79E /* TranslatedAPIManager.swift.swift in Sources */,
 				89EA9C1F27264458000A64C0 /* ViewController.swift in Sources */,
 				89EA9C1B27264458000A64C0 /* AppDelegate.swift in Sources */,
 				89D055342727929600417957 /* PPGViewController.swift in Sources */,
+				8942AD6A2728EA0B00F3F79E /* VisionViewController.swift in Sources */,
 				8942750F2726C3AD00594AFE /* APIKey.swift in Sources */,
+				8942AD6C2728EC7800F3F79E /* VisionAPIManager.swift in Sources */,
 				89EA9C1D27264458000A64C0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,6 +404,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8903DBA6272A21FD0027ED2F /* XCRemoteSwiftPackageReference "JGProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JonasGessner/JGProgressHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		89EA9C2E27264489000A64C0 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -407,6 +431,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8903DBA7272A21FD0027ED2F /* JGProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8903DBA6272A21FD0027ED2F /* XCRemoteSwiftPackageReference "JGProgressHUD" */;
+			productName = JGProgressHUD;
+		};
 		89EA9C2F27264489000A64C0 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 89EA9C2E27264489000A64C0 /* XCRemoteSwiftPackageReference "Alamofire" */;

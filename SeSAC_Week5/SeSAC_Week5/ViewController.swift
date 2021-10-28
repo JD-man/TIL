@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     
     func getCurrentWeather() {
         // OpenWeatherLink       
-        
+        let url = Endpoint.weatherURL
         AF.request(url, method: .get).validate().responseJSON { response in
             switch response.result {
             case .success(let value):
