@@ -12,6 +12,8 @@
 		8942AD682728D35400F3F79E /* TranslatedAPIManager.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8942AD672728D35400F3F79E /* TranslatedAPIManager.swift.swift */; };
 		8942AD6A2728EA0B00F3F79E /* VisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8942AD692728EA0B00F3F79E /* VisionViewController.swift */; };
 		8942AD6C2728EC7800F3F79E /* VisionAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8942AD6B2728EC7800F3F79E /* VisionAPIManager.swift */; };
+		89A1DF1D272B7E8D00B9F568 /* AsyncViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A1DF1C272B7E8D00B9F568 /* AsyncViewController.swift */; };
+		89A1DF1F272B946C00B9F568 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A1DF1E272B946C00B9F568 /* UILabel+Extension.swift */; };
 		89D055342727929600417957 /* PPGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D055332727929600417957 /* PPGViewController.swift */; };
 		89EA9C1B27264458000A64C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EA9C1A27264458000A64C0 /* AppDelegate.swift */; };
 		89EA9C1D27264458000A64C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EA9C1C27264458000A64C0 /* SceneDelegate.swift */; };
@@ -28,6 +30,8 @@
 		8942AD672728D35400F3F79E /* TranslatedAPIManager.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatedAPIManager.swift.swift; sourceTree = "<group>"; };
 		8942AD692728EA0B00F3F79E /* VisionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionViewController.swift; sourceTree = "<group>"; };
 		8942AD6B2728EC7800F3F79E /* VisionAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionAPIManager.swift; sourceTree = "<group>"; };
+		89A1DF1C272B7E8D00B9F568 /* AsyncViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncViewController.swift; sourceTree = "<group>"; };
+		89A1DF1E272B946C00B9F568 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		89D055332727929600417957 /* PPGViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPGViewController.swift; sourceTree = "<group>"; };
 		89EA9C1727264458000A64C0 /* SeSAC_Week5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSAC_Week5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89EA9C1A27264458000A64C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +96,8 @@
 				8942AD672728D35400F3F79E /* TranslatedAPIManager.swift.swift */,
 				8942AD692728EA0B00F3F79E /* VisionViewController.swift */,
 				8942AD6B2728EC7800F3F79E /* VisionAPIManager.swift */,
+				89A1DF1C272B7E8D00B9F568 /* AsyncViewController.swift */,
+				89A1DF1E272B946C00B9F568 /* UILabel+Extension.swift */,
 			);
 			path = SeSAC_Week5;
 			sourceTree = "<group>";
@@ -180,10 +186,12 @@
 				8942AD682728D35400F3F79E /* TranslatedAPIManager.swift.swift in Sources */,
 				89EA9C1F27264458000A64C0 /* ViewController.swift in Sources */,
 				89EA9C1B27264458000A64C0 /* AppDelegate.swift in Sources */,
+				89A1DF1D272B7E8D00B9F568 /* AsyncViewController.swift in Sources */,
 				89D055342727929600417957 /* PPGViewController.swift in Sources */,
 				8942AD6A2728EA0B00F3F79E /* VisionViewController.swift in Sources */,
 				8942750F2726C3AD00594AFE /* APIKey.swift in Sources */,
 				8942AD6C2728EC7800F3F79E /* VisionAPIManager.swift in Sources */,
+				89A1DF1F272B946C00B9F568 /* UILabel+Extension.swift in Sources */,
 				89EA9C1D27264458000A64C0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
