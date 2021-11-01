@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  SeSAC_Week6
+
+  Created by JD_MacMini on 2021/11/01.
+  
+*/
+
+CFBundleDisplayName = "KoreanBundle";
+NSCameraUsageDescription = "카메라 권한";

@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  SeSAC_Week6
+
+  Created by JD_MacMini on 2021/11/01.
+  
+*/
+
+
+"tab_home" = "홈";
+"tab_setting" = "설정";
+
+"welcome_text" = "안녕하세요. 반갑습니다";
