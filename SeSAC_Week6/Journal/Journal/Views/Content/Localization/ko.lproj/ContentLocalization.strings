@@ -1,0 +1,12 @@
+/* 
+  ContentLocalization.strings
+  Journal
+
+  Created by JD_MacMini on 2021/11/01.
+  
+*/
+
+"navigation_title" = "일기 작성";
+"titleTextField_placeholder" = "제목을 작성해주세요.";
+"contentTextView_placeholder" = "내용을 작성해주세요.";
+"saveButton_title" = "저장";

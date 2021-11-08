@@ -1,0 +1,12 @@
+/* 
+  ContentLocalization.strings
+  Journal
+
+  Created by JD_MacMini on 2021/11/01.
+  
+*/
+
+"navigation_title" = "Keep a Journal";
+"titleTextField_placeholder" = "Please Write a title";
+"contentTextView_placeholder" = "Please write the content";
+"saveButton_title" = "Save";
