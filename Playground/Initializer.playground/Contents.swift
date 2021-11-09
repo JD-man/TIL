@@ -67,5 +67,94 @@ let customColor = UIColor(red: 25, green: 12, blue: 156)
 // 2: 프로토콜에도 초기화 구문 가능
 // 3: 초기화구문 델리게이션
 protocol myprotocol {
+    func welcome()
+    init()
+}
+
+//class Hello: myprotocol {
+//
+//    var wow: String = ""
+//
+//    func welcome() {
+//        print("welcome")
+//    }
+//
+//    init(wow: String) {
+//        print("init")
+//        self.wow = wow
+//    }
+//
+//    required init() {
+//        print("required init")
+//    }
+//}
+//
+////var hello = Hello()
+//
+//class HelloBrother: Hello {
+//    required init() {
+//        super.init()
+//    }
+//}
+//
+//
+//var hello2 = HelloBrother()
+
+
+class Hello {
+    
+    init() {
+        print("helloaaaaa")
+    }
     
 }
+
+class HelloBrother: Hello, myprotocol {
+    required override init() {
+        super.init()
+        print("helloBrother")
+    }
+    
+    func welcome() {
+        
+    }
+}
+
+let hello = HelloBrother()
+
+
+// 초기화 구문 델리게이션
+
+class A {
+    
+    var value: Int
+    
+    init() {
+        self.value = 10
+        print("A")
+    }
+}
+
+class B: A {
+    
+    override init() {
+        super.init()
+        print("B")
+    }
+}
+
+class C: B {
+    override init() {
+        super.init()
+        print("C")
+    }
+    
+    deinit {
+        print("C deinit")
+    }
+}
+
+
+var myC: C? = C()
+myC = nil
+
