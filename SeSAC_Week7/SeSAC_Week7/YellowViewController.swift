@@ -14,9 +14,6 @@ protocol PassDataDelegate: AnyObject {
 class YellowViewController: UIViewController {
     
     deinit {
-        NotificationCenter.default.removeObserver(self,
-                                                  name: .firstNotification,
-                                                  object: nil)
         print("deinit yellow")
     }
     

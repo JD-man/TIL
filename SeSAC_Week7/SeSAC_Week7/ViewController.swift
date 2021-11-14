@@ -9,6 +9,13 @@ import UIKit
 
 class ViewController: UIViewController, PassDataDelegate {
     
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self,
+                                                  name: .firstNotification,
+                                                  object: nil)
+    }
+    
     func sendTextData(text: String) {
         textView.text = text
     }
