@@ -50,7 +50,6 @@
 				3FB9DB458BF5573F3FE31B86 /* Pods-Firebase_Analytics.debug.xcconfig */,
 				AB86CA821EC10052A95D7CB8 /* Pods-Firebase_Analytics.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -75,6 +74,7 @@
 		89F3E368275DA40E00E58D5A /* Firebase_Analytics */ = {
 			isa = PBXGroup;
 			children = (
+				89F3E38B275E483900E58D5A /* APIKeys */,
 				89F3E369275DA40E00E58D5A /* AppDelegate.swift */,
 				89F3E36B275DA40E00E58D5A /* SceneDelegate.swift */,
 				89F3E36D275DA40E00E58D5A /* ViewController.swift */,
@@ -82,9 +82,16 @@
 				89F3E372275DA40F00E58D5A /* Assets.xcassets */,
 				89F3E374275DA40F00E58D5A /* LaunchScreen.storyboard */,
 				89F3E377275DA40F00E58D5A /* Info.plist */,
-				89F3E37D275DA46A00E58D5A /* GoogleService-Info.plist */,
 			);
 			path = Firebase_Analytics;
+			sourceTree = "<group>";
+		};
+		89F3E38B275E483900E58D5A /* APIKeys */ = {
+			isa = PBXGroup;
+			children = (
+				89F3E37D275DA46A00E58D5A /* GoogleService-Info.plist */,
+			);
+			path = APIKeys;
 			sourceTree = "<group>";
 		};
 		AEEA64A9FF9645A31D16D068 /* Frameworks */ = {

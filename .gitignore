@@ -128,7 +128,7 @@ iOSInjectionProject/
 
 ## Xcode Assets
 
-# **/**/Assets.xcassets
+**/**/Assets.xcassets
 
 ## Firebase
 **/**/GoogleService-Info.plist
