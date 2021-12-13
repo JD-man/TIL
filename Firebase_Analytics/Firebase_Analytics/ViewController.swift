@@ -10,10 +10,21 @@ import Firebase
 import FirebaseAnalytics
 
 class ViewController: UIViewController {
+    
+    let button: UIButton = {
+        let button = UIButton(type: .roundedRect)
+        button.setTitle("Test Crash", for: [])
+        return button
+    }()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addSubview(button)
+        button.frame = CGRect(x: 20, y: 50, width: 100, height: 30)
+        button.addTarget(self, action: #selector(crashButtonTapped), for: .touchUpInside)
     }
+    let testArr = [1]
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -31,6 +42,11 @@ class ViewController: UIViewController {
           AnalyticsParameterItemName: "TEST",
           AnalyticsParameterContentType: "cont",
         ])
+        
+        
+    }
+    @objc func crashButtonTapped() {
+        let _ = testArr[1]
     }
 }
 
