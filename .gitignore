@@ -128,13 +128,13 @@ iOSInjectionProject/
 
 ## Xcode Assets
 
-**/**/Assets.xcassets
+**/**/**/Assets.xcassets
 
 ## Firebase
-**/**/GoogleService-Info.plist
+**/**/**/GoogleService-Info.plist
 
 ## APIKey
-**/**/APIKey 
+**/**/**/APIKey 
 
 ## Gcc Patch
 /*.gcno
