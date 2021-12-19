@@ -63,7 +63,7 @@ class TabAnimtaionView: UIView {
         print(#function)
         DispatchQueue.main.async {
             self.alpha = 1.0
-            UIView.animate(withDuration: 0.4, delay: 0, options: .curveLinear) {
+            UIView.animate(withDuration: 0.2, delay: 0, options: .curveLinear) {
                 self.alpha = 0.5
             }
         }
@@ -73,7 +73,7 @@ class TabAnimtaionView: UIView {
         print(#function)
         DispatchQueue.main.async {
             self.alpha = 0.5
-            UIView.animate(withDuration: 0.4, delay: 0, options: .curveLinear) {
+            UIView.animate(withDuration: 0.2, delay: 0, options: .curveLinear) {
                 self.alpha = 1
             }
         }
@@ -82,7 +82,7 @@ class TabAnimtaionView: UIView {
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         DispatchQueue.main.async {
             self.alpha = 0.5
-            UIView.animate(withDuration: 0.4, delay: 0, options: .curveLinear) {
+            UIView.animate(withDuration: 0.2, delay: 0, options: .curveLinear) {
                 self.alpha = 1
             }
         }
