@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		893E71C62770115900B916DD /* FirebaseInstallations in Frameworks */ = {isa = PBXBuildFile; productRef = 893E71C52770115900B916DD /* FirebaseInstallations */; };
+		893E71C82770115900B916DD /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 893E71C72770115900B916DD /* FirebaseMessaging */; };
 		89710205276968BA003CE6C1 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 89710204276968BA003CE6C1 /* SnapKit */; };
 		8971020727697912003CE6C1 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8971020627697912003CE6C1 /* SettingViewController.xib */; };
 		8971020927697937003CE6C1 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8971020827697937003CE6C1 /* SettingViewController.swift */; };
@@ -21,7 +23,6 @@
 		899A5DA92766DD74009794D5 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899A5DA82766DD74009794D5 /* BannerView.swift */; };
 		899A5DAB2766E068009794D5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899A5DAA2766E068009794D5 /* DetailViewController.swift */; };
 		899A5DAD2766E4C1009794D5 /* MainActivateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899A5DAC2766E4C1009794D5 /* MainActivateButton.swift */; };
-		89B405CF276AC989004EDB25 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 89B405CE276AC989004EDB25 /* FirebaseMessaging */; };
 		89B405D5276AD221004EDB25 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 89B405D4276AD221004EDB25 /* GoogleService-Info.plist */; };
 		89F0D18A2768300E004D33EB /* SnapDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F0D1892768300E004D33EB /* SnapDetailViewController.swift */; };
 /* End PBXBuildFile section */
@@ -52,8 +53,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89B405CF276AC989004EDB25 /* FirebaseMessaging in Frameworks */,
+				893E71C82770115900B916DD /* FirebaseMessaging in Frameworks */,
 				89710205276968BA003CE6C1 /* SnapKit in Frameworks */,
+				893E71C62770115900B916DD /* FirebaseInstallations in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,7 +120,8 @@
 			name = SeSAC_Week12;
 			packageProductDependencies = (
 				89710204276968BA003CE6C1 /* SnapKit */,
-				89B405CE276AC989004EDB25 /* FirebaseMessaging */,
+				893E71C52770115900B916DD /* FirebaseInstallations */,
+				893E71C72770115900B916DD /* FirebaseMessaging */,
 			);
 			productName = SeSAC_Week12;
 			productReference = 899A5D8D2766CAD4009794D5 /* SeSAC_Week12.app */;
@@ -150,7 +153,7 @@
 			mainGroup = 899A5D842766CAD4009794D5;
 			packageReferences = (
 				89710203276968BA003CE6C1 /* XCRemoteSwiftPackageReference "SnapKit" */,
-				89B405CD276AC989004EDB25 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				893E71C42770115900B916DD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 899A5D8E2766CAD4009794D5 /* Products */;
 			projectDirPath = "";
@@ -404,6 +407,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		893E71C42770115900B916DD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 8.9.0;
+			};
+		};
 		89710203276968BA003CE6C1 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -412,26 +423,23 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		89B405CD276AC989004EDB25 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 8.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		893E71C52770115900B916DD /* FirebaseInstallations */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 893E71C42770115900B916DD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseInstallations;
+		};
+		893E71C72770115900B916DD /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 893E71C42770115900B916DD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
 		89710204276968BA003CE6C1 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 89710203276968BA003CE6C1 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
-		};
-		89B405CE276AC989004EDB25 /* FirebaseMessaging */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 89B405CD276AC989004EDB25 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseMessaging;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

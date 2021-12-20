@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import Firebase
 
 class SnapDetailViewController: UIViewController {
     
@@ -81,6 +82,17 @@ class SnapDetailViewController: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // 로그아웃 등 토큰 교환이 필요한 경우 installation 삭제를 이용한다
+        Installations.installations().delete { error in
+          if let error = error {
+            print("Error deleting installation: \(error)")
+            return
+          }
+          print("Installation deleted");
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

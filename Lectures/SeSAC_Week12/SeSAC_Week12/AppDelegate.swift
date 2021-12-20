@@ -77,7 +77,15 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     
     // 포그라운드 수신 (로컬도 가능)
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        completionHandler([.list, .banner, .badge, .sound])
+        guard let rootViewController = (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window?.rootViewController?.topViewController else { return }
+        
+        // foreground 특정뷰에서 푸시를 보고싶지 않을때
+        if rootViewController is DetailViewController {
+            completionHandler([])
+        }
+        else {
+            completionHandler([.list, .banner, .badge, .sound])
+        }
     }
     
     // 알림 클릭시 (로컬도 가능)
@@ -96,6 +104,24 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         else {
             print("다른 푸시 입니다")
         }
+        
+        // SceneDelegate의 Window 객체 가져오기
+        // 이 프로젝트 같이 탭바컨트롤러인 경우 구현이 난감함
+        guard let rootViewController = (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window?.rootViewController?.topViewController else { return }
+        print(rootViewController)
+        
+//        if rootViewController is SnapDetailViewController {
+//            rootViewController.present(DetailViewController(), animated: true, completion: nil)
+//        }
+        
+        if rootViewController is DetailViewController {
+//            let nav = UINavigationController(rootViewController: SnapDetailViewController())
+//            rootViewController.navigationController?.present(nav, animated: true, completion: nil)
+            
+            rootViewController.navigationController?.pushViewController(SnapDetailViewController(), animated: true)
+        }
+        
+        completionHandler()
     }
 }
 
@@ -115,4 +141,28 @@ extension AppDelegate: MessagingDelegate {
 
 }
 
-//cCLRgIL30UGctO2pskPFTx:APA91bG1EB03GmdgGK3X-he9bKGOde6Yr10GWXjbZUf964siBTC8kImP3OggC6httK_OKH97P13qUMfoBzXk6bi6-aAZmF5fjZjfau1sile8KWoETW-mWeTWzLeoLyeersze0Hse_4dQ
+extension UIViewController {
+    
+    var topViewController: UIViewController {
+        return self.topViewController(currentViewController: self)
+    }
+    
+    // window.rootViewContoller가 어떤건지에 따른 topViewController 가져오기
+    // currentViewController: TabBar Controller
+    func topViewController(currentViewController: UIViewController) -> UIViewController {
+        if let tabBarController = currentViewController as? UITabBarController,
+           let selectedViewController = tabBarController.selectedViewController {
+            return self.topViewController(currentViewController: selectedViewController)
+        }
+        else if let navigationController = currentViewController as? UINavigationController,
+                let visibleViewController = navigationController.visibleViewController {
+            return self.topViewController(currentViewController: visibleViewController)
+        }
+        else if let presentedViewController = currentViewController.presentedViewController {
+            return self.topViewController(currentViewController: presentedViewController)
+        }
+        else {
+            return currentViewController
+        }
+    }
+}
