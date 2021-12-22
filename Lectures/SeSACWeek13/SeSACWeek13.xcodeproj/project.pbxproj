@@ -19,6 +19,12 @@
 		89C6A8522771762E0083E426 /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C6A8512771762E0083E426 /* DummyViewController.swift */; };
 		89C6A854277177260083E426 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C6A853277177260083E426 /* DummyData.swift */; };
 		89C6A856277178BC0083E426 /* UITableViewCellRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C6A855277178BC0083E426 /* UITableViewCellRepresentable.swift */; };
+		89D58B262772A59C0065D259 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D58B252772A59C0065D259 /* BaseViewController.swift */; };
+		89D58B292772A77D0065D259 /* NASAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D58B282772A77D0065D259 /* NASAViewController.swift */; };
+		89D58B2C2772A91E0065D259 /* SignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D58B2B2772A91E0065D259 /* SignViewController.swift */; };
+		89D58B2E2772A99A0065D259 /* SignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D58B2D2772A9990065D259 /* SignView.swift */; };
+		89D58B312772BF740065D259 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 89D58B302772BF740065D259 /* Alamofire */; };
+		89D58B332772C6E80065D259 /* SignViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D58B322772C6E80065D259 /* SignViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +41,11 @@
 		89C6A8512771762E0083E426 /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
 		89C6A853277177260083E426 /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 		89C6A855277178BC0083E426 /* UITableViewCellRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellRepresentable.swift; sourceTree = "<group>"; };
+		89D58B252772A59C0065D259 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		89D58B282772A77D0065D259 /* NASAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAViewController.swift; sourceTree = "<group>"; };
+		89D58B2B2772A91E0065D259 /* SignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignViewController.swift; sourceTree = "<group>"; };
+		89D58B2D2772A9990065D259 /* SignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignView.swift; sourceTree = "<group>"; };
+		89D58B322772C6E80065D259 /* SignViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +54,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89C6A84A277156260083E426 /* SnapKit in Frameworks */,
+				89D58B312772BF740065D259 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +80,8 @@
 		89C6A8332771540B0083E426 /* SeSACWeek13 */ = {
 			isa = PBXGroup;
 			children = (
+				89D58B2A2772A9020065D259 /* Sign */,
+				89D58B272772A76C0065D259 /* NASA */,
 				89C6A84F277174530083E426 /* UITableViewCell+Extension.swift */,
 				89C6A8342771540B0083E426 /* AppDelegate.swift */,
 				89C6A8362771540B0083E426 /* SceneDelegate.swift */,
@@ -80,8 +94,27 @@
 				89C6A8512771762E0083E426 /* DummyViewController.swift */,
 				89C6A853277177260083E426 /* DummyData.swift */,
 				89C6A855277178BC0083E426 /* UITableViewCellRepresentable.swift */,
+				89D58B252772A59C0065D259 /* BaseViewController.swift */,
 			);
 			path = SeSACWeek13;
+			sourceTree = "<group>";
+		};
+		89D58B272772A76C0065D259 /* NASA */ = {
+			isa = PBXGroup;
+			children = (
+				89D58B282772A77D0065D259 /* NASAViewController.swift */,
+			);
+			path = NASA;
+			sourceTree = "<group>";
+		};
+		89D58B2A2772A9020065D259 /* Sign */ = {
+			isa = PBXGroup;
+			children = (
+				89D58B2B2772A91E0065D259 /* SignViewController.swift */,
+				89D58B2D2772A9990065D259 /* SignView.swift */,
+				89D58B322772C6E80065D259 /* SignViewModel.swift */,
+			);
+			path = Sign;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,6 +135,7 @@
 			name = SeSACWeek13;
 			packageProductDependencies = (
 				89C6A849277156260083E426 /* SnapKit */,
+				89D58B302772BF740065D259 /* Alamofire */,
 			);
 			productName = SeSACWeek13;
 			productReference = 89C6A8312771540B0083E426 /* SeSACWeek13.app */;
@@ -133,6 +167,7 @@
 			mainGroup = 89C6A8282771540B0083E426;
 			packageReferences = (
 				89C6A848277156260083E426 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				89D58B2F2772BF740065D259 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 89C6A8322771540B0083E426 /* Products */;
 			projectDirPath = "";
@@ -161,12 +196,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				89C6A854277177260083E426 /* DummyData.swift in Sources */,
+				89D58B332772C6E80065D259 /* SignViewModel.swift in Sources */,
 				89C6A8522771762E0083E426 /* DummyViewController.swift in Sources */,
 				89C6A8392771540B0083E426 /* ViewController.swift in Sources */,
 				89C6A850277174530083E426 /* UITableViewCell+Extension.swift in Sources */,
 				89C6A8352771540B0083E426 /* AppDelegate.swift in Sources */,
+				89D58B262772A59C0065D259 /* BaseViewController.swift in Sources */,
 				89C6A856277178BC0083E426 /* UITableViewCellRepresentable.swift in Sources */,
+				89D58B2C2772A91E0065D259 /* SignViewController.swift in Sources */,
 				89C6A84E2771674F0083E426 /* Cast.swift in Sources */,
+				89D58B2E2772A99A0065D259 /* SignView.swift in Sources */,
+				89D58B292772A77D0065D259 /* NASAViewController.swift in Sources */,
 				89C6A84C27715BD30083E426 /* APIService.swift in Sources */,
 				89C6A8372771540B0083E426 /* SceneDelegate.swift in Sources */,
 			);
@@ -386,6 +426,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		89D58B2F2772BF740065D259 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -393,6 +441,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 89C6A848277156260083E426 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		89D58B302772BF740065D259 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 89D58B2F2772BF740065D259 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
