@@ -39,7 +39,7 @@
   그냥 쓰던대로 쓰는거임.
 - **fileprivate**    
 <div align = "center">        
-  <img src = "./Images/fileprivate.png" width= 50%>
+  <img src = "./Images/filePrivate.png" width= 50%>
 </div>
 p는 대문자가 아니다.  
 
@@ -53,7 +53,7 @@ p는 대문자가 아니다.
 - **private**  
 한 블록( { } 내부 )에서만 접근이 가능하다.
 <div align = "center">        
-  <img src = "./Images/fileprivate.png" width= 50%>
+  <img src = "./Images/filePrivate.png" width= 50%>
 </div>
 위에 위에 있는 스샷인데 같은파일이라 fileprivate는 접근이 되지만 private는 {} 외부라서 안됨.  
 
