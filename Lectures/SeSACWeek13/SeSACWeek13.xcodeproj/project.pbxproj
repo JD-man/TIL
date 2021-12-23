@@ -10,6 +10,8 @@
 		89B597CD2773FE5800D9F67F /* SeSACFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B597C92773FE4A00D9F67F /* SeSACFramework.framework */; };
 		89B597CE2773FE5800D9F67F /* SeSACFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 89B597C92773FE4A00D9F67F /* SeSACFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		89B597D12773FED500D9F67F /* FrameworkTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B597D02773FED500D9F67F /* FrameworkTestViewController.swift */; };
+		89C3CCE027749FC30026249F /* AccessClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C3CCDF27749FC30026249F /* AccessClass.swift */; };
+		89C3CCE22774A1D60026249F /* AccessOtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C3CCE12774A1D60026249F /* AccessOtherViewController.swift */; };
 		89C6A8352771540B0083E426 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C6A8342771540B0083E426 /* AppDelegate.swift */; };
 		89C6A8372771540B0083E426 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C6A8362771540B0083E426 /* SceneDelegate.swift */; };
 		89C6A8392771540B0083E426 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C6A8382771540B0083E426 /* ViewController.swift */; };
@@ -64,6 +66,8 @@
 /* Begin PBXFileReference section */
 		89B597C32773FE4A00D9F67F /* SeSACFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SeSACFramework.xcodeproj; path = ../SeSACFramework/SeSACFramework.xcodeproj; sourceTree = "<group>"; };
 		89B597D02773FED500D9F67F /* FrameworkTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkTestViewController.swift; sourceTree = "<group>"; };
+		89C3CCDF27749FC30026249F /* AccessClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessClass.swift; sourceTree = "<group>"; };
+		89C3CCE12774A1D60026249F /* AccessOtherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessOtherViewController.swift; sourceTree = "<group>"; };
 		89C6A8312771540B0083E426 /* SeSACWeek13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACWeek13.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89C6A8342771540B0083E426 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89C6A8362771540B0083E426 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +118,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		89C3CCDC27749FAD0026249F /* AccessControl */ = {
+			isa = PBXGroup;
+			children = (
+				89C3CCDF27749FC30026249F /* AccessClass.swift */,
+				89C3CCE12774A1D60026249F /* AccessOtherViewController.swift */,
+			);
+			path = AccessControl;
+			sourceTree = "<group>";
+		};
 		89C6A8282771540B0083E426 = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +148,7 @@
 		89C6A8332771540B0083E426 /* SeSACWeek13 */ = {
 			isa = PBXGroup;
 			children = (
+				89C3CCDC27749FAD0026249F /* AccessControl */,
 				89D58B2A2772A9020065D259 /* Sign */,
 				89D58B272772A76C0065D259 /* NASA */,
 				89C6A84F277174530083E426 /* UITableViewCell+Extension.swift */,
@@ -275,10 +289,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89C3CCE22774A1D60026249F /* AccessOtherViewController.swift in Sources */,
 				89C6A854277177260083E426 /* DummyData.swift in Sources */,
 				89D58B332772C6E80065D259 /* SignViewModel.swift in Sources */,
 				89C6A8522771762E0083E426 /* DummyViewController.swift in Sources */,
 				89C6A8392771540B0083E426 /* ViewController.swift in Sources */,
+				89C3CCE027749FC30026249F /* AccessClass.swift in Sources */,
 				89C6A850277174530083E426 /* UITableViewCell+Extension.swift in Sources */,
 				89C6A8352771540B0083E426 /* AppDelegate.swift in Sources */,
 				89D58B262772A59C0065D259 /* BaseViewController.swift in Sources */,
