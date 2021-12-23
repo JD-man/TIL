@@ -11,7 +11,9 @@ class SignViewModel {
     var navigationTitle: String = "Title"
     var buttonTitle: String = "Sign"
     
-    func didTapButton(completion: @escaping () -> Void) {
+    
+    // filepravate는 다른 파일에서 사용할 수 없음
+    fileprivate func didTapButton(completion: @escaping () -> Void) {
         completion()
     }
     
@@ -25,6 +27,7 @@ class SignViewModel {
         }
     }
     
+    // Generic으로 만든다면????????????????!!!!!!!!!!!!!!!
     var listener: ((String, UIColor) -> Void)?
     
     func bind(listener: @escaping (String, UIColor) -> Void) {
