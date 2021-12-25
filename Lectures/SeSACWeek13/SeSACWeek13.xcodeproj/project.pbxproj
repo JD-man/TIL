@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		896DA6AE277549240096F5FA /* TempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896DA6AD277549240096F5FA /* TempViewController.swift */; };
 		89B597CD2773FE5800D9F67F /* SeSACFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B597C92773FE4A00D9F67F /* SeSACFramework.framework */; };
 		89B597CE2773FE5800D9F67F /* SeSACFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 89B597C92773FE4A00D9F67F /* SeSACFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		89B597D12773FED500D9F67F /* FrameworkTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B597D02773FED500D9F67F /* FrameworkTestViewController.swift */; };
@@ -64,6 +65,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		896DA6AD277549240096F5FA /* TempViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempViewController.swift; sourceTree = "<group>"; };
 		89B597C32773FE4A00D9F67F /* SeSACFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SeSACFramework.xcodeproj; path = ../SeSACFramework/SeSACFramework.xcodeproj; sourceTree = "<group>"; };
 		89B597D02773FED500D9F67F /* FrameworkTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkTestViewController.swift; sourceTree = "<group>"; };
 		89C3CCDF27749FC30026249F /* AccessClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessClass.swift; sourceTree = "<group>"; };
@@ -102,6 +104,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		896DA6AA277549140096F5FA /* Temp */ = {
+			isa = PBXGroup;
+			children = (
+				896DA6AD277549240096F5FA /* TempViewController.swift */,
+			);
+			path = Temp;
+			sourceTree = "<group>";
+		};
 		89B597C42773FE4A00D9F67F /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +158,7 @@
 		89C6A8332771540B0083E426 /* SeSACWeek13 */ = {
 			isa = PBXGroup;
 			children = (
+				896DA6AA277549140096F5FA /* Temp */,
 				89C3CCDC27749FAD0026249F /* AccessControl */,
 				89D58B2A2772A9020065D259 /* Sign */,
 				89D58B272772A76C0065D259 /* NASA */,
@@ -303,6 +314,7 @@
 				89C6A84E2771674F0083E426 /* Cast.swift in Sources */,
 				89D58B2E2772A99A0065D259 /* SignView.swift in Sources */,
 				89D58B292772A77D0065D259 /* NASAViewController.swift in Sources */,
+				896DA6AE277549240096F5FA /* TempViewController.swift in Sources */,
 				89B597D12773FED500D9F67F /* FrameworkTestViewController.swift in Sources */,
 				89C6A84C27715BD30083E426 /* APIService.swift in Sources */,
 				89C6A8372771540B0083E426 /* SceneDelegate.swift in Sources */,
