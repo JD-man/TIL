@@ -29,4 +29,5 @@
 - [Multipart Form Data](TIL/Multipart_Form_Data.md) - Multipart Form Data 간단개념  
 - [NWPathMonitor](TIL/NWPathMonitor.md) - 네트워크 상태 및 변화 감지  
 - [URLSession](TIL/URLSession.md) - URLSession
+- [URLSessionDataDelegate](TIL/URLSessionDataDelegate.md) - URLSessionDataDelegate
 ---
