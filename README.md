@@ -8,6 +8,7 @@
 - [Backup/Restore](TIL/Backup_Restore.md) - 백업/복구 구현  
 - [Localization](TIL/Localization.md) - 다국어 지원  
 - [Transfer Value to Previous View](TIL/TransferValueToPreviousView.md) - 현재 뷰에서 이전 뷰로 값 전달하기
+- [AppDelegate&SceneDelegate](TIL/AppDelegate&SceneDelegate.md) - AppDelegate, SceneDelegate, Window.rootViewController
 ---
 
 ## Swift
