@@ -1,6 +1,6 @@
 # App's Life Cycle
 
-- [이미지 출처 및 참고자료](https://developer.apple.com/documentation/uikit/app_and_environment/managing_your_app_s_life_cycle)
+- [참고자료](https://developer.apple.com/documentation/uikit/app_and_environment/managing_your_app_s_life_cycle)
 
 ## 목차
 1. 의의
@@ -24,10 +24,6 @@
 - 유저는 여러개의 scene을 생성할 수 있고 각각 다른 생명주기를 가질 수 있다.
 
 ### 2) State
-
-<div align = "center">        
-    <img src = "https://docs-assets.developer.apple.com/published/8e113a7266/scene-state~dark@2x.png" width=400>
-</div>
 
 1. Unattached
 2. Foreground Inactive
@@ -75,9 +71,6 @@
 - 따라서 UIKit은 UIApplicationDelegate에 모든 생명주기 이벤트를 전달한다.
 
 ### 2) State
-<div align = "center">        
-    <img src = "https://docs-assets.developer.apple.com/published/e6ac158845/app-state~dark@2x.png" width=400>
-</div>
 
 1. Not Running
 2. Inactive
