@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         
         
-        window?.rootViewController = SignInViewController()
+        window?.rootViewController = PersonViewController()
         window?.makeKeyAndVisible()
         print(#function)
     }
