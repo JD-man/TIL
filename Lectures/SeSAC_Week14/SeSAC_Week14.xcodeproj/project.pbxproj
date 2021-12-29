@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		894E915F277BF2BA00AD29E0 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894E915E277BF2BA00AD29E0 /* Endpoint.swift */; };
 		89E210FE277947E800D795AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E210FD277947E800D795AD /* AppDelegate.swift */; };
 		89E21100277947E800D795AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E210FF277947E800D795AD /* SceneDelegate.swift */; };
 		89E21102277947E800D795AD /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E21101277947E800D795AD /* SignInViewController.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		894E915E277BF2BA00AD29E0 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		89E210FA277947E800D795AD /* SeSAC_Week14.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSAC_Week14.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89E210FD277947E800D795AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89E210FF277947E800D795AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				89E2111A27795B2900D795AD /* MainViewController.swift */,
 				89E2111D27795F0800D795AD /* SignInViewModel.swift */,
 				89E2111F27795FAA00D795AD /* Observable.swift */,
+				894E915E277BF2BA00AD29E0 /* Endpoint.swift */,
 			);
 			path = SeSAC_Week14;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				89E2111E27795F0800D795AD /* SignInViewModel.swift in Sources */,
 				89F04C15277A9459006FCDEB /* Lotto.swift in Sources */,
 				89E210FE277947E800D795AD /* AppDelegate.swift in Sources */,
+				894E915F277BF2BA00AD29E0 /* Endpoint.swift in Sources */,
 				89F04C1F277AAB90006FCDEB /* PersonViewController.swift in Sources */,
 				89F04C1B277AA619006FCDEB /* Person.swift in Sources */,
 				89E2111227794BC900D795AD /* SignInView.swift in Sources */,
