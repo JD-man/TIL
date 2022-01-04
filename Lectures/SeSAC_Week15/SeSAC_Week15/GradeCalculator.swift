@@ -30,9 +30,6 @@ class GradeCalulator: UIViewController {
         }
         .bind(to: resultLabel.rx.text)
         .disposed(by: disposeBag)
-            
-        
-            
     }
     
     func setup() {
