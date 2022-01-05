@@ -21,6 +21,8 @@
 		89CA72EC2783D40B006C042B /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CA72EB2783D40B006C042B /* Subject.swift */; };
 		89CA72EE2783E49A006C042B /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CA72ED2783E49A006C042B /* Networking.swift */; };
 		89CA72F12783E8C2006C042B /* RxAlamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 89CA72F02783E8C2006C042B /* RxAlamofire */; };
+		89CB3B9F27851E510072C4B2 /* ReactiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CB3B9E27851E510072C4B2 /* ReactiveViewController.swift */; };
+		89CB3BA127853CED0072C4B2 /* ValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CB3BA027853CED0072C4B2 /* ValidationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		89B213B127829BA7007996AF /* GradeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeCalculator.swift; sourceTree = "<group>"; };
 		89CA72EB2783D40B006C042B /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
 		89CA72ED2783E49A006C042B /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		89CB3B9E27851E510072C4B2 /* ReactiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveViewController.swift; sourceTree = "<group>"; };
+		89CB3BA027853CED0072C4B2 /* ValidationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 				89B213B127829BA7007996AF /* GradeCalculator.swift */,
 				89CA72EB2783D40B006C042B /* Subject.swift */,
 				89CA72ED2783E49A006C042B /* Networking.swift */,
+				89CB3B9E27851E510072C4B2 /* ReactiveViewController.swift */,
+				89CB3BA027853CED0072C4B2 /* ValidationViewController.swift */,
 			);
 			path = SeSAC_Week15;
 			sourceTree = "<group>";
@@ -170,12 +176,14 @@
 			files = (
 				89B213962782873F007996AF /* ViewController.swift in Sources */,
 				89B213B227829BA7007996AF /* GradeCalculator.swift in Sources */,
+				89CB3B9F27851E510072C4B2 /* ReactiveViewController.swift in Sources */,
 				89CA72EC2783D40B006C042B /* Subject.swift in Sources */,
 				89CA72EE2783E49A006C042B /* Networking.swift in Sources */,
 				89B213922782873F007996AF /* AppDelegate.swift in Sources */,
 				89B213B027829659007996AF /* Operator.swift in Sources */,
 				89B213AE27828CB6007996AF /* PickerViewController.swift in Sources */,
 				89B213942782873F007996AF /* SceneDelegate.swift in Sources */,
+				89CB3BA127853CED0072C4B2 /* ValidationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

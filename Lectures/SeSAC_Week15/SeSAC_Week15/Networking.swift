@@ -10,8 +10,16 @@ import RxSwift
 import SnapKit
 import RxAlamofire
 
-class Networking: UIViewController {
+struct Lotto: Codable {
+    let totSellamnt: Int
+    let returnValue, drwNoDate: String
+    let firstWinamnt, drwtNo6, drwtNo4, firstPrzwnerCo: Int
+    let drwtNo5, bnusNo, firstAccumamnt, drwNo: Int
+    let drwtNo2, drwtNo3, drwtNo1: Int
+}
 
+class Networking: UIViewController {
+    
     let urlString = "https://aztro.sameerkumar.website/?sign=sagittarius&day=today"
     let lottoURL = "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=903"
     var disposeBag = DisposeBag()
@@ -31,6 +39,23 @@ class Networking: UIViewController {
             .disposed(by: disposeBag)
         
         
+        let request = useURLSession()
+            .decode(type: Lotto.self, decoder: JSONDecoder())
+            .share()
+            
+        request
+            .subscribe { _ in
+                print("value1")
+            }.disposed(by: disposeBag)
+        
+        request
+            .subscribe { _ in
+                print("value2")
+            }.disposed(by: disposeBag)
+        
+    }
+    
+    func rxAF() {
         json(.post, urlString)
             .subscribe { value in
                 guard let data = value as? [String : Any] else { return }
@@ -44,10 +69,11 @@ class Networking: UIViewController {
             } onDisposed: {
                 print("dispose")
             }.disposed(by: disposeBag)
-        
     }
     
-    func useURLSession(url: String) -> Observable<String> {
+    
+    
+    func useURLSession() -> Observable<Data> {
         return Observable.create { value in
             let url = URL(string: self.lottoURL)
             let task = URLSession.shared.dataTask(with: url!) { data, response, error in
@@ -56,7 +82,8 @@ class Networking: UIViewController {
                     return
                 }
                 if let data = data, let json = String(data: data, encoding: .utf8) {
-                    value.onNext("\(json)")
+                    print("datatask resume")
+                    value.onNext(data)
                 }
                 value.onCompleted()
             }
