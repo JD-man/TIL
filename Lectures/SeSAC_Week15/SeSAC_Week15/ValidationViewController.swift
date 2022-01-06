@@ -11,9 +11,40 @@ import RxRelay
 import RxSwift
 import RxCocoa
 
-class ValidationViewModel {
-    var validText = BehaviorRelay<String>(value: "최소 8자 이상 필요합니다")
+protocol CommonViewModel {
+    associatedtype Input
+    associatedtype Output
     
+    var disposeBag: DisposeBag { get set }
+    func transform(input: Input) -> Output
+}
+
+
+class ValidationViewModel: CommonViewModel {
+    struct Input {
+        let text: ControlProperty<String?>
+        let tap: ControlEvent<Void>
+    }
+    
+    struct Output {
+        let validStatus: Observable<Bool>
+        let validText: BehaviorRelay<String>
+        let sceneTransition: ControlEvent<Void>
+    }
+    
+    var validText = BehaviorRelay<String>(value: "최소 8자 이상 필요합니다")
+    var disposeBag = DisposeBag()
+    
+    func transform(input: Input) -> Output {
+        let resultText = input.text
+            .orEmpty
+            .map { $0.count >= 8 }
+            .share(replay: 1, scope: .whileConnected)
+        
+        return Output(validStatus: resultText,
+                      validText: validText,
+                      sceneTransition: input.tap)
+    }
 }
 
 class ValidationViewController: UIViewController {
@@ -28,7 +59,29 @@ class ValidationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        bind()
+    }
+    
+    func bind() {
+        let input = ValidationViewModel.Input(text: nameTextField.rx.text,
+                                              tap: button.rx.tap)
+        let output = viewModel.transform(input: input)
         
+        output.validStatus
+            .bind(to: button.rx.isEnabled, nameValidationLabel.rx.isHidden)
+            .disposed(by: disposeBag)
+        
+        output.validText
+            .bind(to: nameValidationLabel.rx.text)
+            .disposed(by: disposeBag)
+        
+        output.sceneTransition
+            .bind {
+                self.present(ReactiveViewController(), animated: true, completion: nil)
+            }.disposed(by: disposeBag)
+    }
+    
+    func before() {
         viewModel.validText
             .asDriver()
             .drive(nameValidationLabel.rx.text)
@@ -52,7 +105,6 @@ class ValidationViewController: UIViewController {
                 self.present(ReactiveViewController(), animated: true, completion: nil)
                 
             }.disposed(by: disposeBag)
-        
     }
     
     func setup() {
