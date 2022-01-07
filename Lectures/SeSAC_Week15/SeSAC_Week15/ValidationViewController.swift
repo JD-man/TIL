@@ -59,7 +59,13 @@ class ValidationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        bind()
+        
+        nameTextField.rx.text
+            .orEmpty            
+            .bind {
+                print($0)
+            }.disposed(by: disposeBag)
+        
     }
     
     func bind() {

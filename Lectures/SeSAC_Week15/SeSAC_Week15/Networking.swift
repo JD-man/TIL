@@ -39,19 +39,22 @@ class Networking: UIViewController {
             .disposed(by: disposeBag)
         
         
-        let request = useURLSession()
+        useURLSession()
             .decode(type: Lotto.self, decoder: JSONDecoder())
-            .share()
-            
-        request
-            .subscribe { _ in
-                print("value1")
+            .bind {
+                print($0)
             }.disposed(by: disposeBag)
-        
-        request
-            .subscribe { _ in
-                print("value2")
-            }.disposed(by: disposeBag)
+//            .share()
+//
+//        request
+//            .subscribe { _ in
+//                print("value1")
+//            }.disposed(by: disposeBag)
+//
+//        request
+//            .subscribe { _ in
+//                print("value2")
+//            }.disposed(by: disposeBag)
         
     }
     
@@ -81,7 +84,7 @@ class Networking: UIViewController {
                     value.onError(ExampleError.fail)
                     return
                 }
-                if let data = data, let json = String(data: data, encoding: .utf8) {
+                if let data = data {
                     print("datatask resume")
                     value.onNext(data)
                 }

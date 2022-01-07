@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8947E55B2787D298005085CF /* InAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8947E55A2787D298005085CF /* InAppViewController.swift */; };
 		8985A7EA27866E5B0072CBF4 /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8985A7E927866E5B0072CBF4 /* ButtonViewController.swift */; };
 		89B213922782873F007996AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B213912782873F007996AF /* AppDelegate.swift */; };
 		89B213942782873F007996AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B213932782873F007996AF /* SceneDelegate.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8947E55A2787D298005085CF /* InAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppViewController.swift; sourceTree = "<group>"; };
 		8985A7E927866E5B0072CBF4 /* ButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
 		89B2138E2782873F007996AF /* SeSAC_Week15.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSAC_Week15.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89B213912782873F007996AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				89CB3B9E27851E510072C4B2 /* ReactiveViewController.swift */,
 				89CB3BA027853CED0072C4B2 /* ValidationViewController.swift */,
 				8985A7E927866E5B0072CBF4 /* ButtonViewController.swift */,
+				8947E55A2787D298005085CF /* InAppViewController.swift */,
 			);
 			path = SeSAC_Week15;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				89B213942782873F007996AF /* SceneDelegate.swift in Sources */,
 				89CB3BA127853CED0072C4B2 /* ValidationViewController.swift in Sources */,
 				8985A7EA27866E5B0072CBF4 /* ButtonViewController.swift in Sources */,
+				8947E55B2787D298005085CF /* InAppViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

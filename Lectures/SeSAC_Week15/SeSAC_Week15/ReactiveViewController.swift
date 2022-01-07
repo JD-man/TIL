@@ -56,17 +56,21 @@ class ReactiveViewController: UIViewController {
                 cell.textLabel?.text = "\(element.user): \(element.age)세 (\(element.rate))"
             }.disposed(by: disposeBag)
         
+        var touchNumber = 0
         resetButton.rx.tap
-            .bind { [weak self] in
-                self?.viewModel.fetchData()
+            .asDriver()
+            .map { touchNumber += 1 }
+            .throttle(.seconds(2))
+            .drive { _ in
+                print("\(touchNumber)")
             }.disposed(by: disposeBag)
         
         searchBar.rx.text
             .orEmpty
-            .debounce(.milliseconds(500), scheduler: MainScheduler.instance)
+            .debounce(.milliseconds(200), scheduler: MainScheduler.instance)
             .distinctUntilChanged()
-            .subscribe { [weak self] value in
-                self?.viewModel.filterData(query: value.element ?? "")
+            .subscribe {
+                print($0)
             }.disposed(by: disposeBag)
     }
     

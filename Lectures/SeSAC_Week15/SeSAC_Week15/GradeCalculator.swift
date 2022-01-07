@@ -25,11 +25,23 @@ class GradeCalulator: UIViewController {
             .bind(to: mySwitch.rx.isOn)
             .disposed(by: disposeBag)
         
-        Observable.combineLatest(first.rx.text.orEmpty, second.rx.text.orEmpty) { textValue1, textValue2 -> String in
-            return String(((Double(textValue1) ?? 0.0) + (Double(textValue2) ?? 0.0)) / 2)
-        }
-        .bind(to: resultLabel.rx.text)
-        .disposed(by: disposeBag)
+        //        Observable.combineLatest(first.rx.text.orEmpty, second.rx.text.orEmpty) { textValue1, textValue2 -> String in
+        //            print("Input: (\(textValue1) + \(textValue2)) / 2")
+        //            return String(((Double(textValue1) ?? 0.0) + (Double(textValue2) ?? 0.0)) / 2)
+        //        }
+        //        .bind {
+        //            print("Output: \($0)")
+        //        }
+        //        .disposed(by: disposeBag)
+        
+        Observable.combineLatest(first.rx.text.orEmpty, second.rx.text.orEmpty)
+            .map {
+                String(((Double($0) ?? 0.0) + (Double($1) ?? 0.0)) / 2)
+            }
+            .bind {
+                print("Output: \($0)")
+            }
+            .disposed(by: disposeBag)
     }
     
     func setup() {
