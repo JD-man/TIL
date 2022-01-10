@@ -30,8 +30,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //copyOnWrite()
-        //aboutSubscript()
-        aboutForEach()
+        aboutSubscript()
+        //aboutForEach()
     }
     
     // AnyObject vs Any
@@ -84,19 +84,19 @@ class ViewController: UIViewController {
         
         
         
-        //        var nickname = "JD"
-        //        print(address(of: &nickname))
-        //
-        //        // String은 구조체이므로 복사함.
-        //        // nickname과 다른 주소를 가짐
-        //        var nicknameByFamily = nickname
-        //        print(address(of: &nicknameByFamily))
-        //
-        //        // 여기서 변경해도 nickname 자체는 변경 안됨.
-        //        nicknameByFamily = "조동"
-        //        print(address(of: &nicknameByFamily))
-        //
-        //        print(nickname, nicknameByFamily)
+        var nickname = "JD"
+        print(address(of: &nickname))
+        
+        // String은 구조체이므로 복사함.
+        // nickname과 다른 주소를 가짐
+        var nicknameByFamily = nickname
+        print(address(of: &nicknameByFamily))
+        
+        // 여기서 변경해도 nickname 자체는 변경 안됨.
+        nicknameByFamily = "조동"
+        print(address(of: &nicknameByFamily))
+        
+        print(nickname, nicknameByFamily)
         
         
         // Array도 구조체
@@ -107,6 +107,7 @@ class ViewController: UIViewController {
         print(address(of: &newArray)) // newArray는 array와 주소가 같음!!!
         newArray[0] = 0
         print(address(of: &newArray)) // 여기는 다르다
+        
         
         // Array에 데이터가 많아질 수 있는 상태
         // 수정되기 전까지는 원본을 공유하다가 원본과 데이터가 다르게되는 순간에 데이터를 복사한다. Copy On Write
@@ -140,24 +141,27 @@ class ViewController: UIViewController {
     
     // CollectionType: Collection, Sequence, Subscript
     func aboutSubscript() {
-        let array = [1,2,3,4,5]
-        print(array[2])
-        
-        let dict = ["도사" : 595, "도적" : 594]
-        print(dict["도사"])
+//        let array = [1,2,3,4,5]
+//        print(array[2])
+//
+//        let dict = ["도사" : 595, "도적" : 594]
+//        print(dict["도사"])
         
         // subscript: []을 통한 접근
         
-        let str = "Hello World"
-        print(str[0])
-        print(str[2])
-        print(str[7])
-        print(str[199])
+//        let str = "Hello World"
+//        print(str[-1])
+//        print(str[0])
+//        print(str[2])
+//        print(str[7])
+//        print(str[10])
+//        print(str[11])
+//        print(str[199])
         
         
         struct UserPhone {
-            var numbers = ["01012341234", "01032151315", "01034589786"]
-            
+            var numbers = ["11111", "22222", "33333"]
+
             subscript(idx: Int) -> String? {
                 get {
                     guard (0 ..< numbers.count).contains(idx) else {
@@ -171,10 +175,10 @@ class ViewController: UIViewController {
                     }
                     self.numbers[idx] = newValue ?? ""
                 }
-                
+
             }
         }
-        
+
         var value = UserPhone()
         print(value[0])
         value[0] = "변경"
@@ -226,7 +230,10 @@ class ViewController: UIViewController {
 
 extension String {
     subscript(idx: Int) -> String? {
-        guard (0 ..< count).contains(idx) else {
+        if idx == -1 {
+            return String(self.reversed())
+        }
+        guard idx > 0, idx < count else {
             return nil
         }
         let result = index(startIndex, offsetBy: idx)
