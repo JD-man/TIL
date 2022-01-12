@@ -10,7 +10,9 @@
 - [Transfer Value to Previous View](TIL/TransferValueToPreviousView.md) - 현재 뷰에서 이전 뷰로 값 전달하기
 - [XIB Custom View, @IBDesignable/@IBInspectable](TIL/Custom_UIView_XIB.md)
 - [AppDelegate&SceneDelegate](TIL/AppDelegate&SceneDelegate.md)
-- [TestCode 1](TIL/UnitTest1.md) - 유닛테스트 튜토리얼 1
+- [UnitTest & UITest 1](TIL/UnitTest1.md) - 유닛테스트 기초
+- [UnitTest & UITest 2](TIL/UnitTest2.md) - 비동기 코드 테스트
+- [UnitTest & UITest 3](TIL/UnitTest3.md) - Stub, Mock을 이용한 테스트
 ---
 
 ## Swift
