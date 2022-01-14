@@ -15,6 +15,9 @@
 		897B755B278BB1DD0062B204 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 897B755A278BB1DD0062B204 /* Assets.xcassets */; };
 		897B755E278BB1DD0062B204 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 897B755C278BB1DD0062B204 /* LaunchScreen.storyboard */; };
 		897B7566278BD2A50062B204 /* SwizzlingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897B7565278BD2A50062B204 /* SwizzlingViewController.swift */; };
+		89F9CDE4278FA85600EBF616 /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F9CDE3278FA85600EBF616 /* ButtonViewController.swift */; };
+		89F9CDE6278FADFA00EBF616 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F9CDE5278FADFA00EBF616 /* DetailViewController.swift */; };
+		89F9CDE8278FB6D900EBF616 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F9CDE7278FB6D900EBF616 /* ChatViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		897B755D278BB1DD0062B204 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		897B755F278BB1DD0062B204 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		897B7565278BD2A50062B204 /* SwizzlingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwizzlingViewController.swift; sourceTree = "<group>"; };
+		89F9CDE3278FA85600EBF616 /* ButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
+		89F9CDE5278FADFA00EBF616 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		89F9CDE7278FB6D900EBF616 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +75,9 @@
 				897B755F278BB1DD0062B204 /* Info.plist */,
 				897B7565278BD2A50062B204 /* SwizzlingViewController.swift */,
 				895F9074278E5C460097DD34 /* ConcurrencyViewController.swift */,
+				89F9CDE3278FA85600EBF616 /* ButtonViewController.swift */,
+				89F9CDE5278FADFA00EBF616 /* DetailViewController.swift */,
+				89F9CDE7278FB6D900EBF616 /* ChatViewController.swift */,
 			);
 			path = SeSAC_WEEK16;
 			sourceTree = "<group>";
@@ -146,9 +155,12 @@
 			files = (
 				895F9075278E5C460097DD34 /* ConcurrencyViewController.swift in Sources */,
 				897B7566278BD2A50062B204 /* SwizzlingViewController.swift in Sources */,
+				89F9CDE8278FB6D900EBF616 /* ChatViewController.swift in Sources */,
 				897B7556278BB1DC0062B204 /* ViewController.swift in Sources */,
 				897B7552278BB1DC0062B204 /* AppDelegate.swift in Sources */,
+				89F9CDE4278FA85600EBF616 /* ButtonViewController.swift in Sources */,
 				897B7554278BB1DC0062B204 /* SceneDelegate.swift in Sources */,
+				89F9CDE6278FADFA00EBF616 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
