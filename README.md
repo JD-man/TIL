@@ -22,6 +22,7 @@
 - [AccessControl](TIL/AccessControl.md)
 - [Copy On Write](TIL/CopyOnWrite.md)
 - [Subscript](TIL/Subscript.md)
+- [ARC 1](TIL/ARC1.md) - ARC, Strong Reference Cycles
 ---
 
 ## Architecture

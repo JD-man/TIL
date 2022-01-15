@@ -15,7 +15,7 @@ class MeTableViewCell: UITableViewCell {
         label.clipsToBounds = true        
         label.layer.cornerRadius = 5
         label.textAlignment = .right
-        label.backgroundColor = .systemGreen
+        label.backgroundColor = .systemGreen        
         return label
     }()
     
