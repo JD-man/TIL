@@ -10,6 +10,8 @@
 - [Transfer Value to Previous View](TIL/TransferValueToPreviousView.md) - 현재 뷰에서 이전 뷰로 값 전달하기
 - [XIB Custom View, @IBDesignable/@IBInspectable](TIL/Custom_UIView_XIB.md)
 - [AppDelegate&SceneDelegate](TIL/AppDelegate&SceneDelegate.md)
+- [NSCache](TIL/NSCache.md) - 이미지 캐시를 위한 NSCache
+- [MVC&MVVM](TIL/MVC&MVVM.md) - MVC, MVVM 및 예제
 - [UnitTest & UITest 1](TIL/UnitTest1.md) - 유닛테스트 기초
 - [UnitTest & UITest 2](TIL/UnitTest2.md) - 비동기 코드 테스트
 - [UnitTest & UITest 3](TIL/UnitTest3.md) - Stub, Mock을 이용한 테스트
@@ -18,18 +20,12 @@
 ## Swift
 - [PropertyWrapper](TIL/PropertyWrapper.md)
 - [Concurrency](TIL/Concurrency.md) - Swift 5.5 Concurrency
-- [NSCache](TIL/NSCache.md) - 이미지 캐시를 위한 NSCache
 - [AccessControl](TIL/AccessControl.md)
 - [Copy On Write](TIL/CopyOnWrite.md)
 - [Subscript](TIL/Subscript.md)
-- [ARC 1](TIL/ARC1.md) - ARC, Strong Reference Cycles
-- [ARC 2](TIL/ARC2.md) - Strong Reference Cycle 피하기
----
-
-## Architecture
-
-- [MVC&MVVM](TIL/MVC&MVVM.md) - MVC, MVVM 및 예제
-
+- [ARC 1](TIL/ARC1.md) - ARC, 클래스간 Strong Reference Cycles
+- [ARC 2](TIL/ARC2.md) - 클래스간 Strong Reference Cycle 피하기
+- [ARC 3](TIL/ARC3.md) - 클로저 Strong Reference Cycle 및 피하기
 ---
 
 ## Rx
@@ -48,5 +44,3 @@
 - [Token](TIL/Token.md)
 
 ---
-
-## Question

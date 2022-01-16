@@ -7,5 +7,6 @@
         <page name='ARCinAction'/>
         <page name='StrongReferenceCycles'/>
         <page name='ResolvingSRC'/>
+        <page name='ARCwithClosure'/>
     </pages>
 </playground>
