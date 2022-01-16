@@ -6,5 +6,6 @@
         <page name='Untitled Page'/>
         <page name='ARCinAction'/>
         <page name='StrongReferenceCycles'/>
+        <page name='ResolvingSRC'/>
     </pages>
 </playground>
