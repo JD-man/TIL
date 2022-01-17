@@ -15,8 +15,7 @@ class ViewController: UIViewController {
         let button = UIButton(type: .roundedRect)
         button.setTitle("Test Crash", for: [])
         return button
-    }()
-    
+    }()    
 
     override func viewDidLoad() {
         super.viewDidLoad()

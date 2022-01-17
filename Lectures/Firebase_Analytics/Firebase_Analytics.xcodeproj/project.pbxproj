@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		896B245B2795581600027FAD /* PhoneAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896B245A2795581600027FAD /* PhoneAuthViewController.swift */; };
 		89F3E36A275DA40E00E58D5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F3E369275DA40E00E58D5A /* AppDelegate.swift */; };
 		89F3E36C275DA40E00E58D5A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F3E36B275DA40E00E58D5A /* SceneDelegate.swift */; };
 		89F3E36E275DA40E00E58D5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F3E36D275DA40E00E58D5A /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		3FB9DB458BF5573F3FE31B86 /* Pods-Firebase_Analytics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firebase_Analytics.debug.xcconfig"; path = "Target Support Files/Pods-Firebase_Analytics/Pods-Firebase_Analytics.debug.xcconfig"; sourceTree = "<group>"; };
+		896B245A2795581600027FAD /* PhoneAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneAuthViewController.swift; sourceTree = "<group>"; };
 		89F3E366275DA40E00E58D5A /* Firebase_Analytics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Firebase_Analytics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89F3E369275DA40E00E58D5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89F3E36B275DA40E00E58D5A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				89F3E372275DA40F00E58D5A /* Assets.xcassets */,
 				89F3E374275DA40F00E58D5A /* LaunchScreen.storyboard */,
 				89F3E377275DA40F00E58D5A /* Info.plist */,
+				896B245A2795581600027FAD /* PhoneAuthViewController.swift */,
 			);
 			path = Firebase_Analytics;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				89F3E36E275DA40E00E58D5A /* ViewController.swift in Sources */,
 				89F3E36A275DA40E00E58D5A /* AppDelegate.swift in Sources */,
 				89F3E36C275DA40E00E58D5A /* SceneDelegate.swift in Sources */,
+				896B245B2795581600027FAD /* PhoneAuthViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
