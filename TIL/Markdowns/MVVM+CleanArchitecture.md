@@ -61,21 +61,20 @@ struct Output {
     let someOutput: BehaviorRelay<String>(value: "JD")
 }
 
-func inputToUseCase(_ input: Input, disposeBag: DisposeBag) {
+func transform(_ input: Input, disposeBag: DisposeBag) -> Output {
+    // output for returning
+    var output = Output()
 
+    // Input To UseCase
     input.someEvent
     .subscribe(onNext: { [weak self] in
         self?.someUseCase.makeData()
     }).disposed(by: disposeBag)
-}
 
-func makeOutput(disposeBag: DisposeBag) -> Output {
-    var output: Output
-
+    // Make Output
     someUseCase.data    
     .bind(to: output.someOutput)
     .disposed(by: disposeBag)
-
     return output
 }
 
