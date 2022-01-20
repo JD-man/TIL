@@ -27,6 +27,15 @@ class MainViewController: UIViewController, Coordinated {
         return button
     }()
     
+    let addCoordinatorButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Add Coordinator", for: .normal)
+        button.backgroundColor = .systemRed
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(addCoordinateButtonClicked), for: .touchUpInside)
+        return button
+    }()
+    
     weak var coordinator: MainCoordinator?
 
     override func viewDidLoad() {
@@ -34,6 +43,7 @@ class MainViewController: UIViewController, Coordinated {
         view.backgroundColor = .systemBackground
         view.addSubview(pushSecondVCButton)
         view.addSubview(pushThirdVCButton)
+        view.addSubview(addCoordinatorButton)
         
         pushSecondVCButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10).isActive = true
         pushSecondVCButton.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 10).isActive = true
@@ -44,6 +54,11 @@ class MainViewController: UIViewController, Coordinated {
         pushThirdVCButton.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 10).isActive = true
         pushThirdVCButton.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -10).isActive = true
         pushThirdVCButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        addCoordinatorButton.topAnchor.constraint(equalTo: pushThirdVCButton.bottomAnchor, constant: 10).isActive = true
+        addCoordinatorButton.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 10).isActive = true
+        addCoordinatorButton.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -10).isActive = true
+        addCoordinatorButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
     
     @objc private func pushSecondVCButtonClicked() {
@@ -52,6 +67,15 @@ class MainViewController: UIViewController, Coordinated {
     
     @objc private func pushThirdVCButtonClicked() {
         coordinator?.pushThirdVC()
+    }
+    
+    @objc private func addCoordinateButtonClicked() {
+        coordinator?.addCoordinate()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print(coordinator?.childCoordinators)
     }
 }
 

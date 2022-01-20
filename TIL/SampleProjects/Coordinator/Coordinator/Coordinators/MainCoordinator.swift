@@ -4,8 +4,6 @@
 //
 //  Created by JD_MacMini on 2022/01/18.
 //
-
-import Foundation
 import UIKit
 
 class MainCoordinator: NSObject, CoordinatorType {
@@ -33,5 +31,21 @@ class MainCoordinator: NSObject, CoordinatorType {
         let vc = ThirdViewController()
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func addCoordinate() {
+        let child = AddCoordinator(nav: navigationController)
+        child.parentCoordinator = self
+        childCoordinators.append(child)
+        child.start()
+    }
+    
+    func childDidFinish(_ child: CoordinatorType?) {
+        for (idx, coordinator) in childCoordinators.enumerated() {
+            if coordinator === child {
+                childCoordinators.remove(at: idx)
+                break
+            }
+        }
     }
 }

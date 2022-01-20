@@ -17,6 +17,9 @@
 		890CCA4A2796A93100D6185E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890CCA492796A93100D6185E /* SecondViewController.swift */; };
 		890CCA4C2796A94300D6185E /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890CCA4B2796A94300D6185E /* ThirdViewController.swift */; };
 		890CCA4E2796AA5700D6185E /* Coordinated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890CCA4D2796AA5700D6185E /* Coordinated.swift */; };
+		898B795D2799865300844284 /* AddCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898B795C2799865300844284 /* AddCoordinator.swift */; };
+		898B795F2799870700844284 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898B795E2799870700844284 /* AddViewController.swift */; };
+		898B796327998B0E00844284 /* AddSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898B796227998B0E00844284 /* AddSecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		890CCA492796A93100D6185E /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		890CCA4B2796A94300D6185E /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		890CCA4D2796AA5700D6185E /* Coordinated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinated.swift; sourceTree = "<group>"; };
+		898B795C2799865300844284 /* AddCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCoordinator.swift; sourceTree = "<group>"; };
+		898B795E2799870700844284 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		898B796227998B0E00844284 /* AddSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,12 +70,11 @@
 		890CCA2E2796A43A00D6185E /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				898B796127998AED00844284 /* AddCoordinated */,
+				898B796027998AE100844284 /* MainCoordinated */,
 				890CCA4F2796AA8E00D6185E /* Coordinators */,
 				890CCA442796A60D00D6185E /* Protocols */,
 				890CCA432796A5DF00D6185E /* Resouces */,
-				890CCA332796A43A00D6185E /* MainViewController.swift */,
-				890CCA492796A93100D6185E /* SecondViewController.swift */,
-				890CCA4B2796A94300D6185E /* ThirdViewController.swift */,
 				890CCA3D2796A43B00D6185E /* Info.plist */,
 			);
 			path = Coordinator;
@@ -99,8 +104,28 @@
 			isa = PBXGroup;
 			children = (
 				890CCA472796A65F00D6185E /* MainCoordinator.swift */,
+				898B795C2799865300844284 /* AddCoordinator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		898B796027998AE100844284 /* MainCoordinated */ = {
+			isa = PBXGroup;
+			children = (
+				890CCA332796A43A00D6185E /* MainViewController.swift */,
+				890CCA492796A93100D6185E /* SecondViewController.swift */,
+				890CCA4B2796A94300D6185E /* ThirdViewController.swift */,
+			);
+			path = MainCoordinated;
+			sourceTree = "<group>";
+		};
+		898B796127998AED00844284 /* AddCoordinated */ = {
+			isa = PBXGroup;
+			children = (
+				898B795E2799870700844284 /* AddViewController.swift */,
+				898B796227998B0E00844284 /* AddSecondViewController.swift */,
+			);
+			path = AddCoordinated;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,8 +198,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				898B795F2799870700844284 /* AddViewController.swift in Sources */,
 				890CCA4E2796AA5700D6185E /* Coordinated.swift in Sources */,
 				890CCA4A2796A93100D6185E /* SecondViewController.swift in Sources */,
+				898B795D2799865300844284 /* AddCoordinator.swift in Sources */,
+				898B796327998B0E00844284 /* AddSecondViewController.swift in Sources */,
 				890CCA342796A43A00D6185E /* MainViewController.swift in Sources */,
 				890CCA302796A43A00D6185E /* AppDelegate.swift in Sources */,
 				890CCA4C2796A94300D6185E /* ThirdViewController.swift in Sources */,

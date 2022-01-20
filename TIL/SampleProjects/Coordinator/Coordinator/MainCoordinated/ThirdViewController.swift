@@ -12,7 +12,6 @@ class ThirdViewController: UIViewController, Coordinated {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = .brown
+        view.backgroundColor = .systemGreen
     }
 }
