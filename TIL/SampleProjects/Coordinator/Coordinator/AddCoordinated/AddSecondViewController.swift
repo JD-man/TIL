@@ -8,7 +8,6 @@
 import UIKit
 
 class AddSecondViewController: UIViewController {
-    
     weak var coordinator: AddCoordinator?
 
     override func viewDidLoad() {
