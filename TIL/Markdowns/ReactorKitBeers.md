@@ -122,6 +122,19 @@ func bind(reactor: BeersViewReactor) {
 1. 시작시 Action의 viewdDidLoad 실행
 2. State의 items를 beersTableView에 바인딩
 
+<table align="center">
+<tr>
+<th colspan="2"> Result </th>
+</tr>
+<tr>
+<td>
+<p align="center">
+<video src= https://user-images.githubusercontent.com/62129500/156398219-53d0dd9d-5fa8-4956-8ac5-cb5a8c396c79.mp4 width = 70%>
+</p>
+</td>  
+</tr>
+</table>
+
 ---
 
 ## 4. Pagination
@@ -201,4 +214,17 @@ case .setLoadingStatus(let status):
 ```
 ###
 
--
+## 5. 결과
+<table align="center">
+<tr>
+<th colspan="2"> Result </th>
+</tr>
+<tr>
+<td>
+<p align="center">
+<video src= https://user-images.githubusercontent.com/62129500/156398497-2ee7dc61-e361-4b5a-9591-f3f5bddf5248.mp4 width = 70%>
+</p>
+</td>  
+</tr>
+</table>
+        
