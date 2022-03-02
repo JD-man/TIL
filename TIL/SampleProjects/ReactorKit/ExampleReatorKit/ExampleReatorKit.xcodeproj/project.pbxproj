@@ -7,20 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8995E27D27CF623A00BF6F60 /* BeersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8995E27C27CF623A00BF6F60 /* BeersViewController.swift */; };
+		8995E27F27CF625100BF6F60 /* BeersViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8995E27E27CF625100BF6F60 /* BeersViewReactor.swift */; };
+		8995E28227CF627E00BF6F60 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8995E28127CF627E00BF6F60 /* SnapKit */; };
+		8995E28527CF629300BF6F60 /* ReactorKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8995E28427CF629300BF6F60 /* ReactorKit */; };
+		8995E28827CF62B000BF6F60 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 8995E28727CF62B000BF6F60 /* RxCocoa */; };
+		8995E28A27CF62B000BF6F60 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 8995E28927CF62B000BF6F60 /* RxRelay */; };
+		8995E29027CF652200BF6F60 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 8995E28F27CF652200BF6F60 /* Moya */; };
+		8995E29327CF655600BF6F60 /* BeersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8995E29227CF655600BF6F60 /* BeersModel.swift */; };
+		8995E29627CF669200BF6F60 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8995E29527CF669200BF6F60 /* Kingfisher */; };
+		8995E29827CF679600BF6F60 /* BeersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8995E29727CF679600BF6F60 /* BeersTableViewCell.swift */; };
+		8995E29A27CF68A400BF6F60 /* BeersItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8995E29927CF68A400BF6F60 /* BeersItemModel.swift */; };
+		8995E29D27CF71A800BF6F60 /* BeersTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8995E29C27CF71A800BF6F60 /* BeersTarget.swift */; };
+		8995E2A027CF770500BF6F60 /* ViewController+RxExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8995E29F27CF770500BF6F60 /* ViewController+RxExt.swift */; };
 		899657E927CDFD3100C089FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899657E827CDFD3100C089FE /* AppDelegate.swift */; };
 		899657EB27CDFD3100C089FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899657EA27CDFD3100C089FE /* SceneDelegate.swift */; };
-		899657ED27CDFD3100C089FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899657EC27CDFD3100C089FE /* ViewController.swift */; };
-		899657F027CDFD3100C089FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 899657EE27CDFD3100C089FE /* Main.storyboard */; };
 		899657F227CDFD3200C089FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 899657F127CDFD3200C089FE /* Assets.xcassets */; };
 		899657F527CDFD3200C089FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 899657F327CDFD3200C089FE /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8995E27C27CF623A00BF6F60 /* BeersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersViewController.swift; sourceTree = "<group>"; };
+		8995E27E27CF625100BF6F60 /* BeersViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersViewReactor.swift; sourceTree = "<group>"; };
+		8995E29227CF655600BF6F60 /* BeersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersModel.swift; sourceTree = "<group>"; };
+		8995E29727CF679600BF6F60 /* BeersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersTableViewCell.swift; sourceTree = "<group>"; };
+		8995E29927CF68A400BF6F60 /* BeersItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersItemModel.swift; sourceTree = "<group>"; };
+		8995E29C27CF71A800BF6F60 /* BeersTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersTarget.swift; sourceTree = "<group>"; };
+		8995E29F27CF770500BF6F60 /* ViewController+RxExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+RxExt.swift"; sourceTree = "<group>"; };
 		899657E527CDFD3100C089FE /* ExampleReatorKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleReatorKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		899657E827CDFD3100C089FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		899657EA27CDFD3100C089FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		899657EC27CDFD3100C089FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		899657EF27CDFD3100C089FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		899657F127CDFD3200C089FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		899657F427CDFD3200C089FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		899657F627CDFD3200C089FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -31,12 +47,71 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8995E29627CF669200BF6F60 /* Kingfisher in Frameworks */,
+				8995E28827CF62B000BF6F60 /* RxCocoa in Frameworks */,
+				8995E28527CF629300BF6F60 /* ReactorKit in Frameworks */,
+				8995E28A27CF62B000BF6F60 /* RxRelay in Frameworks */,
+				8995E29027CF652200BF6F60 /* Moya in Frameworks */,
+				8995E28227CF627E00BF6F60 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8995E28B27CF64C100BF6F60 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				899657E827CDFD3100C089FE /* AppDelegate.swift */,
+				899657EA27CDFD3100C089FE /* SceneDelegate.swift */,
+				899657F127CDFD3200C089FE /* Assets.xcassets */,
+				899657F327CDFD3200C089FE /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8995E28C27CF64CC00BF6F60 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8995E27C27CF623A00BF6F60 /* BeersViewController.swift */,
+				8995E29727CF679600BF6F60 /* BeersTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8995E28D27CF64D100BF6F60 /* Reactors */ = {
+			isa = PBXGroup;
+			children = (
+				8995E27E27CF625100BF6F60 /* BeersViewReactor.swift */,
+			);
+			path = Reactors;
+			sourceTree = "<group>";
+		};
+		8995E29127CF653000BF6F60 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8995E29227CF655600BF6F60 /* BeersModel.swift */,
+				8995E29927CF68A400BF6F60 /* BeersItemModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8995E29B27CF719700BF6F60 /* InfraStructure */ = {
+			isa = PBXGroup;
+			children = (
+				8995E29C27CF71A800BF6F60 /* BeersTarget.swift */,
+			);
+			path = InfraStructure;
+			sourceTree = "<group>";
+		};
+		8995E29E27CF76FA00BF6F60 /* Rx+Ext */ = {
+			isa = PBXGroup;
+			children = (
+				8995E29F27CF770500BF6F60 /* ViewController+RxExt.swift */,
+			);
+			path = "Rx+Ext";
+			sourceTree = "<group>";
+		};
 		899657DC27CDFD3100C089FE = {
 			isa = PBXGroup;
 			children = (
@@ -56,12 +131,12 @@
 		899657E727CDFD3100C089FE /* ExampleReatorKit */ = {
 			isa = PBXGroup;
 			children = (
-				899657E827CDFD3100C089FE /* AppDelegate.swift */,
-				899657EA27CDFD3100C089FE /* SceneDelegate.swift */,
-				899657EC27CDFD3100C089FE /* ViewController.swift */,
-				899657EE27CDFD3100C089FE /* Main.storyboard */,
-				899657F127CDFD3200C089FE /* Assets.xcassets */,
-				899657F327CDFD3200C089FE /* LaunchScreen.storyboard */,
+				8995E29E27CF76FA00BF6F60 /* Rx+Ext */,
+				8995E29B27CF719700BF6F60 /* InfraStructure */,
+				8995E29127CF653000BF6F60 /* Models */,
+				8995E28D27CF64D100BF6F60 /* Reactors */,
+				8995E28C27CF64CC00BF6F60 /* Views */,
+				8995E28B27CF64C100BF6F60 /* Resources */,
 				899657F627CDFD3200C089FE /* Info.plist */,
 			);
 			path = ExampleReatorKit;
@@ -83,6 +158,14 @@
 			dependencies = (
 			);
 			name = ExampleReatorKit;
+			packageProductDependencies = (
+				8995E28127CF627E00BF6F60 /* SnapKit */,
+				8995E28427CF629300BF6F60 /* ReactorKit */,
+				8995E28727CF62B000BF6F60 /* RxCocoa */,
+				8995E28927CF62B000BF6F60 /* RxRelay */,
+				8995E28F27CF652200BF6F60 /* Moya */,
+				8995E29527CF669200BF6F60 /* Kingfisher */,
+			);
 			productName = ExampleReatorKit;
 			productReference = 899657E527CDFD3100C089FE /* ExampleReatorKit.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +194,13 @@
 				Base,
 			);
 			mainGroup = 899657DC27CDFD3100C089FE;
+			packageReferences = (
+				8995E28027CF627E00BF6F60 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				8995E28327CF629300BF6F60 /* XCRemoteSwiftPackageReference "ReactorKit" */,
+				8995E28627CF62B000BF6F60 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				8995E28E27CF652200BF6F60 /* XCRemoteSwiftPackageReference "Moya" */,
+				8995E29427CF669200BF6F60 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 899657E627CDFD3100C089FE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +217,6 @@
 			files = (
 				899657F527CDFD3200C089FE /* LaunchScreen.storyboard in Resources */,
 				899657F227CDFD3200C089FE /* Assets.xcassets in Resources */,
-				899657F027CDFD3100C089FE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +227,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				899657ED27CDFD3100C089FE /* ViewController.swift in Sources */,
 				899657E927CDFD3100C089FE /* AppDelegate.swift in Sources */,
+				8995E2A027CF770500BF6F60 /* ViewController+RxExt.swift in Sources */,
+				8995E27F27CF625100BF6F60 /* BeersViewReactor.swift in Sources */,
 				899657EB27CDFD3100C089FE /* SceneDelegate.swift in Sources */,
+				8995E27D27CF623A00BF6F60 /* BeersViewController.swift in Sources */,
+				8995E29D27CF71A800BF6F60 /* BeersTarget.swift in Sources */,
+				8995E29327CF655600BF6F60 /* BeersModel.swift in Sources */,
+				8995E29A27CF68A400BF6F60 /* BeersItemModel.swift in Sources */,
+				8995E29827CF679600BF6F60 /* BeersTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		899657EE27CDFD3100C089FE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				899657EF27CDFD3100C089FE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		899657F327CDFD3200C089FE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -293,7 +380,6 @@
 				INFOPLIST_FILE = ExampleReatorKit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -305,7 +391,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -320,7 +406,6 @@
 				INFOPLIST_FILE = ExampleReatorKit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -332,7 +417,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -358,6 +443,82 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8995E28027CF627E00BF6F60 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		8995E28327CF629300BF6F60 /* XCRemoteSwiftPackageReference "ReactorKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactorKit/ReactorKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		8995E28627CF62B000BF6F60 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		8995E28E27CF652200BF6F60 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.0;
+			};
+		};
+		8995E29427CF669200BF6F60 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8995E28127CF627E00BF6F60 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8995E28027CF627E00BF6F60 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		8995E28427CF629300BF6F60 /* ReactorKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8995E28327CF629300BF6F60 /* XCRemoteSwiftPackageReference "ReactorKit" */;
+			productName = ReactorKit;
+		};
+		8995E28727CF62B000BF6F60 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8995E28627CF62B000BF6F60 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		8995E28927CF62B000BF6F60 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8995E28627CF62B000BF6F60 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		8995E28F27CF652200BF6F60 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8995E28E27CF652200BF6F60 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		8995E29527CF669200BF6F60 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8995E29427CF669200BF6F60 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 899657DD27CDFD3100C089FE /* Project object */;
 }
