@@ -39,6 +39,9 @@ class UserTextFieldTest: XCTestCase {
         app.textFields["Third"].tap()
         app.textFields["Third"].typeText("우왕굳2")
         
+        app.buttons["firstButton"].tap()
+        
+        XCTAssertEqual(app.staticTexts.element(matching: .any, identifier: "resultLabel").label, "우왕굳")
         
         
     }

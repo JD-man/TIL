@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8995E27327CEFC0200BF6F60 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8995E27227CEFC0200BF6F60 /* LoginViewController.swift */; };
+		8995E27527CEFE3A00BF6F60 /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8995E27427CEFE3A00BF6F60 /* LoginViewControllerTests.swift */; };
+		8995E27727CF042E00BF6F60 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8995E27627CF042E00BF6F60 /* Validator.swift */; };
+		8995E27927CF04B600BF6F60 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8995E27827CF04B600BF6F60 /* User.swift */; };
+		8995E27B27CF063200BF6F60 /* ValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8995E27A27CF063200BF6F60 /* ValidatorTests.swift */; };
 		899847D427CC597B004C938E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899847D327CC597B004C938E /* AppDelegate.swift */; };
 		899847D627CC597B004C938E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899847D527CC597B004C938E /* SceneDelegate.swift */; };
 		899847D827CC597B004C938E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899847D727CC597B004C938E /* ViewController.swift */; };
@@ -37,6 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8995E27227CEFC0200BF6F60 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8995E27427CEFE3A00BF6F60 /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
+		8995E27627CF042E00BF6F60 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		8995E27827CF04B600BF6F60 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8995E27A27CF063200BF6F60 /* ValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorTests.swift; sourceTree = "<group>"; };
 		899847D027CC597B004C938E /* SeSAC_Week23.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSAC_Week23.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		899847D327CC597B004C938E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		899847D527CC597B004C938E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +118,9 @@
 				899847DC27CC597C004C938E /* Assets.xcassets */,
 				899847DE27CC597C004C938E /* LaunchScreen.storyboard */,
 				899847E127CC597C004C938E /* Info.plist */,
+				8995E27227CEFC0200BF6F60 /* LoginViewController.swift */,
+				8995E27627CF042E00BF6F60 /* Validator.swift */,
+				8995E27827CF04B600BF6F60 /* User.swift */,
 			);
 			path = SeSAC_Week23;
 			sourceTree = "<group>";
@@ -116,6 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				899847EA27CC597C004C938E /* SeSAC_Week23Tests.swift */,
+				8995E27427CEFE3A00BF6F60 /* LoginViewControllerTests.swift */,
+				8995E27A27CF063200BF6F60 /* ValidatorTests.swift */,
 			);
 			path = SeSAC_Week23Tests;
 			sourceTree = "<group>";
@@ -261,7 +276,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8995E27327CEFC0200BF6F60 /* LoginViewController.swift in Sources */,
 				899847D827CC597B004C938E /* ViewController.swift in Sources */,
+				8995E27927CF04B600BF6F60 /* User.swift in Sources */,
+				8995E27727CF042E00BF6F60 /* Validator.swift in Sources */,
 				899847D427CC597B004C938E /* AppDelegate.swift in Sources */,
 				899847D627CC597B004C938E /* SceneDelegate.swift in Sources */,
 			);
@@ -271,6 +289,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8995E27B27CF063200BF6F60 /* ValidatorTests.swift in Sources */,
+				8995E27527CEFE3A00BF6F60 /* LoginViewControllerTests.swift in Sources */,
 				899847EB27CC597C004C938E /* SeSAC_Week23Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
