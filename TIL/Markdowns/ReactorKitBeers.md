@@ -16,11 +16,13 @@
 - SceneDelegate UIWindow 설정
 - BeersViewController에 TableView 추가, cell 제작
 
+---
+
 ## 2. Reactor 만들기
 ### 구성요소
 ```swift
 enum Action {
-    case viewDidLoad
+    case updateBeers
 }
 
 enum Mutation {
@@ -33,7 +35,7 @@ struct State {
 }
 ```
 
-- Action: viewDidLoad API 호출
+- Action: viewDidLoad시 API 호출
 - Mutation: State의 items와 nextPage 업데이트
 - State: 테이블뷰에 사용할 items와 Pagination을 위한 nextPage
 
@@ -43,8 +45,7 @@ struct State {
 // Action -> Mutation
 func mutate(action: Action) -> Observable<Mutation> {
     switch action {
-    case .viewDidLoad:
-        print("viewWillAppear")
+    case .updateBeers:        
         return Observable.concat(
             getBeers(page: 1)
                 .map { Mutation.setBeersItem(items: $0.0, nextPage: $0.1) }
@@ -96,12 +97,14 @@ func reduce(state: State, mutation: Mutation) -> State {
 
 - Mutation으로 받은 연관값을 이용해 state 변경
 
+---
+
 ## 3. View 만들기, bind
 ```swift
 func bind(reactor: BeersViewReactor) {
     // Action    
     Observable.just(Void())
-        .map { Reactor.Action.viewDidLoad }
+        .map { Reactor.Action.updateBeers }
         .bind(to: reactor.action)
         .disposed(by: disposeBag)
     
@@ -118,3 +121,84 @@ func bind(reactor: BeersViewReactor) {
 
 1. 시작시 Action의 viewdDidLoad 실행
 2. State의 items를 beersTableView에 바인딩
+
+---
+
+## 4. Pagination
+
+### View, bind 추가
+```swift
+func bind(reactor: BeersViewReactor) {
+    // ...
+
+    // Action 2. tableview scrolling -> pagination
+    beersTableView.rx.contentOffset
+        .filter { [weak self] in
+            guard let self = self else { return false }
+            // 시작하자마자 pagination 되는 것을 방지
+            guard self.beersTableView.frame.height > 0 else { return false }
+            return $0.y + self.beersTableView.frame.height > self.beersTableView.contentSize.height - 100
+        }.map { _ in Reactor.Action.pagination }
+        .bind(to: reactor.action)
+        .disposed(by: disposeBag)
+
+    // ...
+}
+```
+
+- beersTableView의 contenOffset을 이용
+- offset + height > contentSize.height - 100인 경우에만 pagination Action 실행
+
+### Reactor 구성요소 추가 
+```swift
+enum Action {
+    // ...
+    case pagination
+}
+
+enum Mutation {
+    // ...
+    case addBeersItem(items: [BeersItemModel], nextPage: Int)
+    case setLoadingStatus(status: Bool)
+}
+
+struct State {
+    // ...
+    var isLoading: Bool = false
+}
+```
+
+- pagination Action 추가
+- 추가로 가져오는 items를 추가하는 Mutation, 중복호출을 방지하는 isLoading 변경하는 Mutation 추가
+- isLoading == false인 state에서만 pagination 가능
+
+### Reactor mutate 케이스 추가
+```swift
+case .pagination:
+    guard self.currentState.isLoading == false else { return Observable.empty() }
+    return Observable.concat([
+        Observable.just(Mutation.setLoadingStatus(status: true)),
+        getBeers(page: currentState.nextPage)
+            .map { Mutation.addBeersItem(items: $0.0, nextPage: $0.1) },
+        Observable.just(Mutation.setLoadingStatus(status: false)),
+        ])
+```
+
+- concat을 이용해 로딩중 상태변경 -> 데이터 추가 -> 로딩완료 상태변경 순서대로 실행
+- getBeers의 observable은 반드시 complete이 되어야 한다.
+
+### Reactor reduce 케이스 추가
+```swift
+case .addBeersItem(let items, let nextPage):
+    var newState = state
+    newState.items.append(contentsOf: items)
+    newState.nextPage = nextPage
+    return newState
+case .setLoadingStatus(let status):
+    var newState = state
+    newState.isLoading = status
+    return newState
+```
+###
+
+-

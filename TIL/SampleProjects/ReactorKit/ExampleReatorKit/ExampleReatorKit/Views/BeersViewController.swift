@@ -14,10 +14,8 @@ import RxCocoa
 final class BeersViewController: UIViewController, View {
     var disposeBag = DisposeBag()
     
-    
     private let beersTableView: UITableView = {
-        let tableView = UITableView()
-        tableView.separatorStyle = .none
+        let tableView = UITableView()        
         tableView.rowHeight = UITableView.automaticDimension
         tableView.register(BeersTableViewCell.self, forCellReuseIdentifier: BeersTableViewCell.identifier)
         return tableView
@@ -28,8 +26,8 @@ final class BeersViewController: UIViewController, View {
         viewConfig()
     }
     
-    private func viewConfig() {        
-        view.backgroundColor = .red
+    private func viewConfig() {
+        view.backgroundColor = .systemBackground
         reactor = BeersViewReactor()
         view.addSubview(beersTableView)
         beersTableView.snp.makeConstraints { make in
@@ -38,12 +36,24 @@ final class BeersViewController: UIViewController, View {
     }
     
     func bind(reactor: BeersViewReactor) {
-        //rx.viewWillAppear
+        // Action 1. viewDidLoad
         Observable.just(Void())
-            .map { Reactor.Action.viewDidLoad }
+            .map { Reactor.Action.updateBeers }
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
         
+        // Action 2. tableview scrolling -> pagination
+        beersTableView.rx.contentOffset
+            .filter { [weak self] in
+                guard let self = self else { return false }
+                // 시작하자마자 pagination 되는 것을 방지
+                guard self.beersTableView.frame.height > 0 else { return false }
+                return $0.y + self.beersTableView.frame.height > self.beersTableView.contentSize.height - 100
+            }.map { _ in Reactor.Action.pagination }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        // state: items bind to table view
         reactor.state
             .map { $0.items }
             .bind(to: beersTableView.rx.items(
