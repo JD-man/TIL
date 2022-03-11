@@ -156,7 +156,8 @@ class ConcurrencyViewController: UIViewController {
         group.notify(queue: .main) {
             print("notify")
             self.view.backgroundColor = .systemPink
-        }
+        }       
+        
     }
     
     
