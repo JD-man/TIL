@@ -45,9 +45,11 @@ final class BeersViewController: UIViewController, View {
         // Action 2. tableview scrolling -> pagination
         beersTableView.rx.contentOffset
             .filter { [weak self] in
+                print("content offset")
                 guard let self = self else { return false }
                 // 시작하자마자 pagination 되는 것을 방지
                 guard self.beersTableView.frame.height > 0 else { return false }
+                print("pagination")
                 return $0.y + self.beersTableView.frame.height > self.beersTableView.contentSize.height - 100
             }.map { _ in Reactor.Action.pagination }
             .bind(to: reactor.action)
