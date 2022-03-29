@@ -6,7 +6,7 @@
 1. 의의
 2. Scene Based Life Cycle
 3. App Based Life Cycle
-
+4. 차이점
 ---
 
 ## 1. 의의
@@ -104,3 +104,21 @@ func applicationDidEnterBackground(UIApplication)
 func applicationWillEnterForeground(UIApplication)
 func applicationWillTerminate(UIApplication)
 ```
+
+---
+
+### 4) 차이점
+### Unattached
+
+- iOS 13 이상에서 Scene-Based App Life Cycle
+- 유저 또는 시스템이 앱에 새로운 Scene을 요청하면 UIKit은 앱을 Unattachced로 만든다.
+- 메모리를 점유하고, 실행된 상태
+
+### Not Running
+
+- App이 실행되지 않았거나 실행되었지만 종료된 상태
+- 메모리도 없고 프로세스도 실행되지 않음
+
+### Suspended
+
+- Background에 있고 아무것도 실행되지 않는 상태. 메모리는 점유하지만 대기중.

@@ -15,6 +15,8 @@
 - [UnitTest & UITest 1](TIL/Markdowns/UnitTest1.md) - 유닛테스트 기초
 - [UnitTest & UITest 2](TIL/Markdowns/UnitTest2.md) - 비동기 코드 테스트
 - [UnitTest & UITest 3](TIL/Markdowns/UnitTest3.md) - Stub, Mock을 이용한 테스트
+- [App Life Cycle](TIL/Markdowns/AppLifeCycle.md)
+
 ---
 
 ## Swift
@@ -30,7 +32,13 @@
 - [Top-Level Code, Top-Level Entry Point, @main](TIL/Markdowns/AttributeMain.md)
 - [동시성 프로그래밍과 GCD, DispatchQueue](TIL/Markdowns/GCD.md)
 - [DispatchGroup](TIL/Markdowns/DispatchGroup.md)
-
+- [Collection Type](TIL/Markdowns/CollectionType.md)
+- [Convenience Initializer](TIL/Markdowns/Convenience_Initializer.md)
+- [Escaping Closure](TIL/Markdowns/EscapingClosure.md)
+- [Foundation](TIL/Markdowns/Foundation.md)
+- [Hashable, Equatable](TIL/Markdowns/Hashable%26Equatable.md)
+- [Optional](TIL/Markdowns/Optional.md)
+- [Type Casting](TIL/Markdowns/TypeCasting.md)
 ---
 
 ## Architecture, Pattern
