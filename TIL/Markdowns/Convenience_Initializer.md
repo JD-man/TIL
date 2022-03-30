@@ -4,7 +4,7 @@
 1. Designated Initializer
 2. Convenience Initializer
 3. 사용
-
+4. 구조체와의 차이
 ---
 
 ## 1. Designated Initializer
@@ -51,3 +51,12 @@ final class BaseTextField: UITextField {
     }
 }
 ```
+
+---
+
+## 4. 구조체와의 차이
+- 구조체에서 convenience Init을 사용하려고 하면 **Initializers in structs are not marked with 'convenience'** 에러가 발생.
+- 클래스는 상속이 있고 보통 서브클래스에서 super의 이니셜라이저를 실행한다.
+- 클래스에서 convenience라고 마크하는 것은 designated init이 아니라는 것과 같다.
+- 따라서 서브클래스에서 실행하는 super의 이니셜라이저로 convenience 이니셜라이저가 실행될 수 없게 막아준다.
+- 구조체는 상속이 없으므로 convenience 이니셜라이저가 필요없어서 위와같은 에러가 발생한다.
