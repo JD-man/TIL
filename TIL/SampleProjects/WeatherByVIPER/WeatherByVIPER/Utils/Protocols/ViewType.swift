@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+protocol ViewType {
+    var presenter: PresenterType { get set }
+}

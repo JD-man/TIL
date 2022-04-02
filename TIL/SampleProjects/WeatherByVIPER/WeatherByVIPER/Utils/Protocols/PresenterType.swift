@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+protocol PresenterType {
+    var router: RouterType { get set }
+    var interactor: InteractorType { get set }
+}
