@@ -25,6 +25,16 @@
 		8927C57327F72B0B00C435CE /* PresenterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8927C57227F72B0B00C435CE /* PresenterType.swift */; };
 		8927C57527F72B1800C435CE /* RouterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8927C57427F72B1800C435CE /* RouterType.swift */; };
 		8927C57927F72B9100C435CE /* WeatherRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8927C57827F72B9100C435CE /* WeatherRequestModel.swift */; };
+		89CB5F8327F864900098C675 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 89CB5F8227F864900098C675 /* RxCocoa */; };
+		89CB5F8527F864900098C675 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 89CB5F8427F864900098C675 /* RxRelay */; };
+		89CB5F8727F864900098C675 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 89CB5F8627F864900098C675 /* RxSwift */; };
+		89CB5F8A27F8649B0098C675 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 89CB5F8927F8649B0098C675 /* Kingfisher */; };
+		89CB5F8D27F864AA0098C675 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 89CB5F8C27F864AA0098C675 /* SnapKit */; };
+		89CB5F9027F864D30098C675 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 89CB5F8F27F864D30098C675 /* Moya */; };
+		89CB5F9227F865640098C675 /* WeatherBaseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CB5F9127F865640098C675 /* WeatherBaseLabel.swift */; };
+		89CB5F9527F865930098C675 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CB5F9427F865930098C675 /* UIView+Ext.swift */; };
+		89CB5F9727F8674B0098C675 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CB5F9627F8674B0098C675 /* AppRouter.swift */; };
+		89CB5F9927F86EB00098C675 /* WeatherBaseImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CB5F9827F86EB00098C675 /* WeatherBaseImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +77,10 @@
 		8927C57227F72B0B00C435CE /* PresenterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterType.swift; sourceTree = "<group>"; };
 		8927C57427F72B1800C435CE /* RouterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterType.swift; sourceTree = "<group>"; };
 		8927C57827F72B9100C435CE /* WeatherRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRequestModel.swift; sourceTree = "<group>"; };
+		89CB5F9127F865640098C675 /* WeatherBaseLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherBaseLabel.swift; sourceTree = "<group>"; };
+		89CB5F9427F865930098C675 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		89CB5F9627F8674B0098C675 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		89CB5F9827F86EB00098C675 /* WeatherBaseImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherBaseImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +88,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89CB5F8A27F8649B0098C675 /* Kingfisher in Frameworks */,
+				89CB5F8727F864900098C675 /* RxSwift in Frameworks */,
+				89CB5F9027F864D30098C675 /* Moya in Frameworks */,
+				89CB5F8527F864900098C675 /* RxRelay in Frameworks */,
+				89CB5F8327F864900098C675 /* RxCocoa in Frameworks */,
+				89CB5F8D27F864AA0098C675 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +178,7 @@
 				8927C52B27F7296C00C435CE /* SceneDelegate.swift */,
 				8927C53227F7296D00C435CE /* Assets.xcassets */,
 				8927C53427F7296D00C435CE /* LaunchScreen.storyboard */,
+				89CB5F9627F8674B0098C675 /* AppRouter.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -219,6 +240,8 @@
 			isa = PBXGroup;
 			children = (
 				8927C52D27F7296C00C435CE /* WeatherViewController.swift */,
+				89CB5F9127F865640098C675 /* WeatherBaseLabel.swift */,
+				89CB5F9827F86EB00098C675 /* WeatherBaseImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -226,6 +249,7 @@
 		8927C56427F72A8000C435CE /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				89CB5F9327F865840098C675 /* Extension */,
 				8927C56527F72A8700C435CE /* Protocols */,
 			);
 			path = Utils;
@@ -258,6 +282,14 @@
 			path = Request;
 			sourceTree = "<group>";
 		};
+		89CB5F9327F865840098C675 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				89CB5F9427F865930098C675 /* UIView+Ext.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -274,6 +306,14 @@
 			dependencies = (
 			);
 			name = WeatherByVIPER;
+			packageProductDependencies = (
+				89CB5F8227F864900098C675 /* RxCocoa */,
+				89CB5F8427F864900098C675 /* RxRelay */,
+				89CB5F8627F864900098C675 /* RxSwift */,
+				89CB5F8927F8649B0098C675 /* Kingfisher */,
+				89CB5F8C27F864AA0098C675 /* SnapKit */,
+				89CB5F8F27F864D30098C675 /* Moya */,
+			);
 			productName = WeatherByVIPER;
 			productReference = 8927C52627F7296C00C435CE /* WeatherByVIPER.app */;
 			productType = "com.apple.product-type.application";
@@ -346,6 +386,12 @@
 				Base,
 			);
 			mainGroup = 8927C51D27F7296C00C435CE;
+			packageReferences = (
+				89CB5F8127F864900098C675 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				89CB5F8827F8649B0098C675 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				89CB5F8B27F864AA0098C675 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				89CB5F8E27F864D30098C675 /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			productRefGroup = 8927C52727F7296C00C435CE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -389,6 +435,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8927C52E27F7296C00C435CE /* WeatherViewController.swift in Sources */,
+				89CB5F9227F865640098C675 /* WeatherBaseLabel.swift in Sources */,
+				89CB5F9927F86EB00098C675 /* WeatherBaseImageView.swift in Sources */,
+				89CB5F9527F865930098C675 /* UIView+Ext.swift in Sources */,
 				8927C56927F72AC100C435CE /* WeatherPresenter.swift in Sources */,
 				8927C57527F72B1800C435CE /* RouterType.swift in Sources */,
 				8927C52A27F7296C00C435CE /* AppDelegate.swift in Sources */,
@@ -398,6 +447,7 @@
 				8927C57927F72B9100C435CE /* WeatherRequestModel.swift in Sources */,
 				8927C56727F72AB500C435CE /* WeatherInteractor.swift in Sources */,
 				8927C52C27F7296C00C435CE /* SceneDelegate.swift in Sources */,
+				89CB5F9727F8674B0098C675 /* AppRouter.swift in Sources */,
 				8927C56F27F72AF100C435CE /* ViewType.swift in Sources */,
 				8927C55B27F7298100C435CE /* URLComponents.swift in Sources */,
 				8927C56D27F72AD700C435CE /* WeatherRouter.swift in Sources */,
@@ -726,6 +776,74 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		89CB5F8127F864900098C675 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		89CB5F8827F8649B0098C675 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		89CB5F8B27F864AA0098C675 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		89CB5F8E27F864D30098C675 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		89CB5F8227F864900098C675 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 89CB5F8127F864900098C675 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		89CB5F8427F864900098C675 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 89CB5F8127F864900098C675 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		89CB5F8627F864900098C675 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 89CB5F8127F864900098C675 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		89CB5F8927F8649B0098C675 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 89CB5F8827F8649B0098C675 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		89CB5F8C27F864AA0098C675 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 89CB5F8B27F864AA0098C675 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		89CB5F8F27F864D30098C675 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 89CB5F8E27F864D30098C675 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8927C51E27F7296C00C435CE /* Project object */;
 }
