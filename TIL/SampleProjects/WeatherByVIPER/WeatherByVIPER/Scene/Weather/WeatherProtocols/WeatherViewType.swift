@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol ViewType {
-    var presenter: PresenterType { get set }
+protocol WeatherViewType {
+    var presenter: WeatherPresenterType { get set }
 }

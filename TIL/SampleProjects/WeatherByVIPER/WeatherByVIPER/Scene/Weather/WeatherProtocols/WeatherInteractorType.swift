@@ -6,5 +6,8 @@
 //
 
 import Foundation
+import RxSwift
 
-protocol InteractorType { }
+protocol WeatherInteractorType {
+    func fetchWeatherData() -> Single<WeatherResponseModel>
+}

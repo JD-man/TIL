@@ -7,20 +7,22 @@
 
 import Foundation
 
-//let temperature = json["main"]["temp"].intValue
-//let humidity = json["main"]["humidity"].stringValue
-//let windSpeed = json["wind"]["speed"].stringValue
-//let statusIcon = json["weather"][0]["icon"].stringValue
-//
-//let weather = Weather(temperature: "\(temperature)",
-//                      humidity: humidity,
-//                      windSpeed: windSpeed,
-//                      statusImageURL: statusImageURL)
-
-
 struct WeatherResponseModel: Codable {
-    let temp: Int
-    let humidity: String
-    let speed: String
+    let main: WeatherMain
+    let wind: WeatherWind
+    let weather: [WeatherDetail]
+}
+
+struct WeatherMain: Codable {
+    let temp: Double
+    let humidity: Double
+}
+
+struct WeatherWind: Codable {
+    let speed: Double
+}
+
+struct WeatherDetail: Codable {
     let icon: String
 }
+
