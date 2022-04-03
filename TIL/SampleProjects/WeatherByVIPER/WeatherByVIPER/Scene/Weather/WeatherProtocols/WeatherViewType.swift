@@ -8,5 +8,5 @@
 import Foundation
 
 protocol WeatherViewType {
-    var presenter: WeatherPresenterType { get set }
+    var presenter: WeatherPresenter { get set }
 }

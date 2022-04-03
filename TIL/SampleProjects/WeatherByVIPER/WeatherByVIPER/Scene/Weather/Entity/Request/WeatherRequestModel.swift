@@ -13,8 +13,8 @@ import Foundation
 //    let appid = URLQueryItem(name: "appid", value: key)
 
 struct WeatherRequestModel {
-    let lat: Double
-    let lon: Double
+    let lat: Double = 37.48433605595456
+    let lon: Double = 126.92985099999653
     let units: String = "metric"
 }
 

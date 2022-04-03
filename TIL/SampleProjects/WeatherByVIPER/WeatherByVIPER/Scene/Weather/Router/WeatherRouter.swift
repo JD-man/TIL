@@ -21,7 +21,11 @@ final class WeatherRouter: RouterType {
     }
     
     func pushWeatherViewController() {
-        let weatherVC = WeatherViewController()
+        let weatherVC = WeatherViewController(
+            presenter: WeatherPresenter(
+                router: self,
+                interactor: WeatherInteractor())
+        )
         navigationController.pushViewController(weatherVC, animated: true)
     }
 }
