@@ -19,27 +19,45 @@ final class WeatherPresenter: WeatherPresenterType {
     }
     
     struct Output {
-        let weatherResponse = PublishRelay<WeatherResponseModel>()
+        let tempDriver: Driver<String>
+        let humidityDriver: Driver<String>
+        let speedDriver: Driver<String>
+        let iconDriver: Driver<String>
     }
     
     var router: RouterType
     var interactor: WeatherInteractorType
+    var weatherResponseRelay = PublishRelay<WeatherResponseModel>()
     
     var input = Input()
-    var output = Output()
     
     init(router: RouterType, interactor: WeatherInteractorType) {
         self.router = router
         self.interactor = interactor
-        binding()
     }
     
-    func binding() {
+    func transform() -> Output {
+        
         input.viewDidLoad
             .withUnretained(self)
             .flatMapLatest { (presenter, signal) in
-                presenter.interactor.fetchWeatherData()
-            }.bind(to: output.weatherResponse)
+                presenter.interactor.fetchWeatherData() }
+            .catch {
+                print("error: ", $0)
+                return Observable.empty() }
+            .bind(to: weatherResponseRelay)
             .disposed(by: disposeBag)
+        
+        let tempDriver = weatherResponseRelay.map { "온도: \($0.main.temp)" }.asDriver(onErrorJustReturn: "")
+        let humidityDriver = weatherResponseRelay.map { "습도: \($0.main.humidity)" }.asDriver(onErrorJustReturn: "")
+        let speedDriver = weatherResponseRelay.map { "풍속: \($0.wind.speed)" }.asDriver(onErrorJustReturn: "")
+        let iconDriver = weatherResponseRelay.map { $0.weather[0].icon }.asDriver(onErrorJustReturn: "")
+        
+        return Output(
+            tempDriver: tempDriver,
+            humidityDriver: humidityDriver,
+            speedDriver: speedDriver,
+            iconDriver: iconDriver
+        )
     }
 }
