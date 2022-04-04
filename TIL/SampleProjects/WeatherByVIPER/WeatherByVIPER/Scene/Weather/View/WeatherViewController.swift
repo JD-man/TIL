@@ -62,29 +62,27 @@ class WeatherViewController: UIViewController, WeatherViewType {
         }
     }
     
-    private func binding() {        
+    private func binding() {
+        let output = presenter.transform()
+        
         Observable.just(())
             .bind(to: presenter.input.viewDidLoad)
             .disposed(by: disposeBag)
         
-        presenter.output.weatherResponse
-            .map { "\($0.main.temp)" }
-            .bind(to: temperatureLabel.rx.text)
+        output.tempDriver
+            .drive(temperatureLabel.rx.text)
             .disposed(by: disposeBag)
         
-        presenter.output.weatherResponse
-            .map { "\($0.main.humidity)" }
-            .bind(to: humidityLabel.rx.text)
+        output.humidityDriver
+            .drive(humidityLabel.rx.text)
             .disposed(by: disposeBag)
         
-        presenter.output.weatherResponse
-            .map { "\($0.wind.speed)" }
-            .bind(to: speedLabel.rx.text)
+        output.speedDriver
+            .drive(speedLabel.rx.text)
             .disposed(by: disposeBag)
         
-        presenter.output.weatherResponse
-            .map { $0.weather[0].icon }
-            .bind(to: iconImageView.rx.iconImage)
+        output.iconDriver
+            .drive(iconImageView.rx.iconImage)
             .disposed(by: disposeBag)
     }
 }
