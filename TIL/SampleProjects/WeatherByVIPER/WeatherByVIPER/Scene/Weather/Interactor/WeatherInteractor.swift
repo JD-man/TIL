@@ -18,11 +18,14 @@ final class WeatherInteractor: WeatherInteractorType {
             self?.provider.request(.getWeatherInfo(parameters: parameters), completion: { result in
                 switch result {
                 case .success(let response):
-                    guard let model = try? response.map(WeatherResponseModel.self) else { return }
+                    guard let model = try? response.map(WeatherResponseModel.self) else {
+                        single(.failure(WeatherError.decodeFail))
+                        return
+                    }
                     single(.success(model))
                 case .failure(let error):
-                    print(error)
-                    single(.failure(error))
+                    let statusCode = error.response?.statusCode ?? 0
+                    single(.failure(WeatherError(rawValue: statusCode) ?? .unknownError))
                 }
             })
             return Disposables.create()

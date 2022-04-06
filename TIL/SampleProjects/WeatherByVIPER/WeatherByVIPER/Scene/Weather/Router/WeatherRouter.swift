@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class WeatherRouter: RouterType {
+final class WeatherRouter: WeatherRouterType {
     var navigationController: UINavigationController
     weak var parentRouter: RouterType?
     
@@ -27,5 +27,12 @@ final class WeatherRouter: RouterType {
                 interactor: WeatherInteractor())
         )
         navigationController.pushViewController(weatherVC, animated: true)
+    }
+    
+    func alertWeatherAPIError(of error: Error) {
+        guard let weatherError = error as? WeatherError else { return }
+        let alert = UIAlertController(title: "Error!", message: weatherError.description, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "확인", style: .default))
+        navigationController.present(alert, animated: true)        
     }
 }

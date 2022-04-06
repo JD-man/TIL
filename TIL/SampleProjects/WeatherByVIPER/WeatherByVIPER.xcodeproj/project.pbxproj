@@ -37,6 +37,8 @@
 		89CB5F9727F8674B0098C675 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CB5F9627F8674B0098C675 /* AppRouter.swift */; };
 		89CB5F9927F86EB00098C675 /* WeatherBaseImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CB5F9827F86EB00098C675 /* WeatherBaseImageView.swift */; };
 		89CB5F9C27F884440098C675 /* WeatherTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CB5F9B27F884440098C675 /* WeatherTarget.swift */; };
+		89D1FC8F27FDCA8A00C17C67 /* WeatherRouterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D1FC8E27FDCA8A00C17C67 /* WeatherRouterType.swift */; };
+		89D1FC9327FDCDAD00C17C67 /* WeatherError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D1FC9227FDCDAD00C17C67 /* WeatherError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,8 @@
 		89CB5F9627F8674B0098C675 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		89CB5F9827F86EB00098C675 /* WeatherBaseImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherBaseImageView.swift; sourceTree = "<group>"; };
 		89CB5F9B27F884440098C675 /* WeatherTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTarget.swift; sourceTree = "<group>"; };
+		89D1FC8E27FDCA8A00C17C67 /* WeatherRouterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRouterType.swift; sourceTree = "<group>"; };
+		89D1FC9227FDCDAD00C17C67 /* WeatherError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,6 +288,7 @@
 				8927C56E27F72AF100C435CE /* WeatherViewType.swift */,
 				8927C57027F72AFE00C435CE /* WeatherInteractorType.swift */,
 				8927C57227F72B0B00C435CE /* WeatherPresenterType.swift */,
+				89D1FC8E27FDCA8A00C17C67 /* WeatherRouterType.swift */,
 			);
 			path = WeatherProtocols;
 			sourceTree = "<group>";
@@ -315,9 +320,26 @@
 		89CB5F9A27F884300098C675 /* InfraStructure */ = {
 			isa = PBXGroup;
 			children = (
-				89CB5F9B27F884440098C675 /* WeatherTarget.swift */,
+				89D1FC9127FDCD9D00C17C67 /* Target */,
+				89D1FC9027FDCD9800C17C67 /* Error */,
 			);
 			path = InfraStructure;
+			sourceTree = "<group>";
+		};
+		89D1FC9027FDCD9800C17C67 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				89D1FC9227FDCDAD00C17C67 /* WeatherError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		89D1FC9127FDCD9D00C17C67 /* Target */ = {
+			isa = PBXGroup;
+			children = (
+				89CB5F9B27F884440098C675 /* WeatherTarget.swift */,
+			);
+			path = Target;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -477,6 +499,8 @@
 				8927C57927F72B9100C435CE /* WeatherRequestModel.swift in Sources */,
 				8927C56727F72AB500C435CE /* WeatherInteractor.swift in Sources */,
 				8927C52C27F7296C00C435CE /* SceneDelegate.swift in Sources */,
+				89D1FC9327FDCDAD00C17C67 /* WeatherError.swift in Sources */,
+				89D1FC8F27FDCA8A00C17C67 /* WeatherRouterType.swift in Sources */,
 				89CB5F9727F8674B0098C675 /* AppRouter.swift in Sources */,
 				8927C56F27F72AF100C435CE /* WeatherViewType.swift in Sources */,
 				89CB5F9C27F884440098C675 /* WeatherTarget.swift in Sources */,

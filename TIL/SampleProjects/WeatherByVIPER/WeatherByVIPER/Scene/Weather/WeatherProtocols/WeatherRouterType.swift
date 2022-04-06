@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+protocol WeatherRouterType: RouterType {
+    func alertWeatherAPIError(of error: Error)
+}

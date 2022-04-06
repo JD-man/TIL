@@ -9,6 +9,6 @@ import Foundation
 import RxSwift
 
 protocol WeatherPresenterType {
-    var router: RouterType { get set }
+    var router: WeatherRouterType { get set }
     var interactor: WeatherInteractorType { get set }
 }

@@ -25,13 +25,13 @@ final class WeatherPresenter: WeatherPresenterType {
         let iconDriver: Driver<String>
     }
     
-    var router: RouterType
+    var router: WeatherRouterType
     var interactor: WeatherInteractorType
     var weatherResponseRelay = PublishRelay<WeatherResponseModel>()
     
     var input = Input()
     
-    init(router: RouterType, interactor: WeatherInteractorType) {
+    init(router: WeatherRouterType, interactor: WeatherInteractorType) {
         self.router = router
         self.interactor = interactor
     }
@@ -40,10 +40,9 @@ final class WeatherPresenter: WeatherPresenterType {
         
         input.viewDidLoad
             .withUnretained(self)
-            .flatMapLatest { (presenter, signal) in
-                presenter.interactor.fetchWeatherData() }
-            .catch {
-                print("error: ", $0)
+            .flatMapLatest { $0.0.interactor.fetchWeatherData() }
+            .catch { [weak self] in
+                self?.router.alertWeatherAPIError(of: $0)
                 return Observable.empty() }
             .bind(to: weatherResponseRelay)
             .disposed(by: disposeBag)
