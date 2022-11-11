@@ -8,5 +8,6 @@
 import SwiftUI
 
 protocol ViewBuilderType {
-    var view: AnyView { get }
+  associatedtype ViewType: View
+  var view: ViewType { get }
 }
